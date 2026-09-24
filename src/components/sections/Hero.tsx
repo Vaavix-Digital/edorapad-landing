@@ -45,13 +45,13 @@ export default function Hero() {
             <div className="mt-10 flex flex-wrap items-center gap-5">
               <Link
                 href="#pricing"
-                className="inline-flex items-center px-8 py-4 bg-[#155863] text-white text-sm font-medium tracking-wide hover:bg-[#17343A] transition-colors duration-300 rounded-md shadow-sm"
+                className="inline-flex items-center px-8 py-4 bg-[#155863] text-white text-sm font-medium tracking-wide hover:bg-[#49A796] transition-colors duration-300 rounded-md shadow-sm"
               >
                 Begin Architecture
               </Link>
               <Link
                 href="#architecture"
-                className="text-sm font-medium text-[#17343A] border-b border-[#17343A]/40 hover:border-[#155863] hover:text-[#155863] transition-colors duration-300 pb-1"
+                className="text-sm font-medium text-[#17343A] border-b border-[#17343A]/40 hover:border-[#49A796] hover:text-[#49A796] transition-colors duration-300 pb-1"
               >
                 Explore the System
               </Link>
@@ -82,7 +82,7 @@ export default function Hero() {
                     key={index}
                     onClick={() => setCurrentSlide(index)}
                     className={`h-1.5 rounded-full transition-all duration-500 ${
-                      currentSlide === index ? 'w-6 bg-[#F5FAF9]' : 'w-1.5 bg-[#F5FAF9]/40 hover:bg-[#F5FAF9]/70'
+                      currentSlide === index ? 'w-6 bg-[#79CFC0]' : 'w-1.5 bg-[#F5FAF9]/40 hover:bg-[#79CFC0]/70'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />

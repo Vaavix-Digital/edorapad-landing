@@ -58,7 +58,7 @@ export default function Features() {
                 className="border-t border-[#17343A]/15 py-8 first:border-t-0 md:first:border-t md:pt-8"
               >
                 <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8">
-                  <span className="text-sm font-semibold text-[#155863] tracking-wide shrink-0">{feature.num} //</span>
+                  <span className="text-sm font-semibold text-[#49A796] tracking-wide shrink-0">{feature.num} //</span>
                   <div>
                     <h3 className="font-heading text-xl md:text-2xl text-[#111416] mb-2">{feature.title}</h3>
                     <p className="text-[#6B8185] leading-[1.6] max-w-xl">

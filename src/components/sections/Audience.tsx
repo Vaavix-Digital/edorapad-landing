@@ -89,7 +89,7 @@ export default function Audience() {
               className={`px-5 py-2.5 text-sm font-medium tracking-wide transition-all duration-300 border ${
                 activeTab === tab 
                   ? "bg-[#155863] text-white border-[#155863]" 
-                  : "bg-transparent text-[#111416]/70 border-[#111416]/15 hover:border-[#155863]/40 hover:text-[#155863]"
+                  : "bg-transparent text-[#111416]/70 border-[#111416]/15 hover:border-[#49A796]/40 hover:text-[#49A796]"
               }`}
             >
               {tab}
@@ -118,7 +118,7 @@ export default function Audience() {
               <ul className="space-y-4">
                 {content.features.map((feature, idx) => (
                   <li key={idx} className="flex gap-4 text-[#111416] leading-[1.6] border-b border-[#111416]/10 pb-4">
-                    <span className="text-[#155863] font-semibold shrink-0">—</span>
+                    <span className="text-[#49A796] font-semibold shrink-0">—</span>
                     <span>{feature}</span>
                   </li>
                 ))}
