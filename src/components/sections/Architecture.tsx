@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function Architecture() {
   return (
-    <section id="architecture" className="w-full bg-[#17343A] py-24 md:py-36">
+    <section id="architecture" className="w-full bg-[#17343A] pt-24 md:pt-36 pb-12 md:pb-16">
       <div className="w-full max-w-[120rem] mx-auto px-6 md:px-16 lg:px-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -36,7 +36,7 @@ export default function Architecture() {
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             className="lg:col-span-5 lg:col-start-8 order-1 lg:order-2"
           >
-            <p className="text-xs font-semibold tracking-[0.25em] text-[#155863] mb-6 uppercase">
+            <p className="text-xs font-semibold tracking-[0.25em] text-[#79CFC0] mb-6 uppercase">
               Cross-Platform Sync
             </p>
             <h2 className="font-heading text-3xl md:text-[3rem] leading-[1.08] tracking-tightest text-[#F5FAF9]">

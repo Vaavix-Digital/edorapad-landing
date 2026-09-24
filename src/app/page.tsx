@@ -2,6 +2,7 @@ import Hero from "@/components/sections/Hero";
 import Features from "@/components/sections/Features";
 import Audience from "@/components/sections/Audience";
 import Architecture from "@/components/sections/Architecture";
+import HowItWorks from "@/components/sections/HowItWorks";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Features />
       <Audience />
       <Architecture />
+      <HowItWorks />
       <Footer />
     </main>
   );
