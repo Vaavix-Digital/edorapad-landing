@@ -8,11 +8,12 @@ import Gallery from "@/components/sections/Gallery";
 import Pricing from "@/components/sections/Pricing";
 import CompareFeatures from "@/components/sections/CompareFeatures";
 import Marketplace from "@/components/sections/Marketplace";
+import MobileApps from "@/components/sections/MobileApps";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between w-full">
+    <main className="flex min-h-screen flex-col items-center justify-between w-full overflow-x-hidden">
       <Hero />
       <Features />
       <Audience />
@@ -23,6 +24,7 @@ export default function Home() {
       <Pricing />
       <CompareFeatures />
       <Marketplace />
+      <MobileApps />
       <Footer />
     </main>
   );
