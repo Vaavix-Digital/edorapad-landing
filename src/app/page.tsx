@@ -4,6 +4,7 @@ import Audience from "@/components/sections/Audience";
 import Architecture from "@/components/sections/Architecture";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Enterprise from "@/components/sections/Enterprise";
+import Gallery from "@/components/sections/Gallery";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Architecture />
       <HowItWorks />
       <Enterprise />
+      <Gallery />
       <Footer />
     </main>
   );
