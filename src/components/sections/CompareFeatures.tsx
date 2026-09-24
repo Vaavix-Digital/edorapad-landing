@@ -3,38 +3,62 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const features = [
-  { category: "Platform", items: [
-    { name: "Institute, student, parent & tutor portals", starter: true, growth: true, institution: true, enterprise: true },
-    { name: "Web + iOS & Android apps", starter: true, growth: true, institution: true, enterprise: true },
-    { name: "Mobile attendance marking", starter: true, growth: true, institution: true, enterprise: true },
-  ]},
-  { category: "Learning", items: [
-    { name: "Basic LMS & course builder", starter: true, growth: true, institution: true, enterprise: true },
-    { name: "Live classes & hybrid learning", starter: false, growth: true, institution: true, enterprise: true },
-    { name: "Custom certificates", starter: false, growth: false, institution: true, enterprise: true },
-    { name: "Course creator marketplace (5% rate)", starter: false, growth: false, institution: true, enterprise: true },
-  ]},
-  { category: "Operations", items: [
-    { name: "Fee collection & installments", starter: true, growth: true, institution: true, enterprise: true },
-    { name: "AI facial-verification clock-in", starter: false, growth: true, institution: true, enterprise: true },
-    { name: "Payroll & HR", starter: false, growth: true, institution: true, enterprise: true },
-    { name: "Marketing & lead tracking", starter: false, growth: true, institution: true, enterprise: true },
-  ]},
-  { category: "Scale", items: [
-    { name: "Student cap", starter: "200", growth: "1,000", institution: "5,000", enterprise: "Unlimited" },
-    { name: "Multi-branch support", starter: false, growth: false, institution: true, enterprise: true },
-    { name: "Advanced institutional analytics", starter: false, growth: false, institution: true, enterprise: true },
-    { name: "White-label platform", starter: false, growth: false, institution: false, enterprise: true },
-    { name: "Full API access & SSO", starter: false, growth: false, institution: false, enterprise: true },
-  ]},
-  { category: "Support", items: [
-    { name: "Standard support", starter: true, growth: true, institution: true, enterprise: true },
-    { name: "Priority processing queue", starter: false, growth: true, institution: true, enterprise: true },
-    { name: "Dedicated onboarding & migration", starter: false, growth: false, institution: true, enterprise: true },
-    { name: "SLA-backed account manager", starter: false, growth: false, institution: false, enterprise: true },
-  ]},
-];
+// Mocked API Response
+const featureLedgerData = {
+  success: true,
+  data: {
+    headline: "The Feature Ledger.",
+    subheadline: "Compare Every Tier",
+    description: "No hidden surprises. Detailed side-by-side comparison of every plan feature.",
+    categories: [
+      { 
+        name: "Platform", 
+        items: [
+          { name: "Institute, student, parent & tutor portals", starter: true, growth: true, institution: true, enterprise: true },
+          { name: "Web + iOS & Android apps", starter: true, growth: true, institution: true, enterprise: true },
+          { name: "Mobile attendance marking", starter: true, growth: true, institution: true, enterprise: true },
+        ]
+      },
+      { 
+        name: "Learning", 
+        items: [
+          { name: "Basic LMS & course builder", starter: true, growth: true, institution: true, enterprise: true },
+          { name: "Live classes & hybrid learning", starter: false, growth: true, institution: true, enterprise: true },
+          { name: "Custom certificates", starter: false, growth: false, institution: true, enterprise: true },
+          { name: "Course creator marketplace (5% rate)", starter: false, growth: false, institution: true, enterprise: true },
+        ]
+      },
+      { 
+        name: "Operations", 
+        items: [
+          { name: "Fee collection & installments", starter: true, growth: true, institution: true, enterprise: true },
+          { name: "AI facial-verification clock-in", starter: false, growth: true, institution: true, enterprise: true },
+          { name: "Payroll & HR", starter: false, growth: true, institution: true, enterprise: true },
+          { name: "Marketing & lead tracking", starter: false, growth: true, institution: true, enterprise: true },
+        ]
+      },
+      { 
+        name: "Scale", 
+        items: [
+          { name: "Student cap", starter: "200", growth: "1,000", institution: "5,000", enterprise: "Unlimited" },
+          { name: "Multi-branch support", starter: false, growth: false, institution: true, enterprise: true },
+          { name: "Advanced institutional analytics", starter: false, growth: false, institution: true, enterprise: true },
+          { name: "White-label platform", starter: false, growth: false, institution: false, enterprise: true },
+          { name: "Full API access & SSO", starter: false, growth: false, institution: false, enterprise: true },
+        ]
+      },
+      { 
+        name: "Support", 
+        items: [
+          { name: "Standard support", starter: true, growth: true, institution: true, enterprise: true },
+          { name: "Priority processing queue", starter: false, growth: true, institution: true, enterprise: true },
+          { name: "Dedicated onboarding & migration", starter: false, growth: false, institution: true, enterprise: true },
+          { name: "SLA-backed account manager", starter: false, growth: false, institution: false, enterprise: true },
+        ]
+      },
+    ]
+  }
+};
 
 const CheckIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check w-4 h-4 text-[#49A796] mx-auto">
@@ -55,6 +79,8 @@ const renderCell = (val: boolean | string) => {
 };
 
 export default function CompareFeatures() {
+  const { data } = featureLedgerData;
+
   return (
     <section id="compare-features" className="w-full bg-white pt-12 pb-24 md:pb-36 border-t border-[#17343A]/15">
       <div className="w-full max-w-[120rem] mx-auto px-6 md:px-16 lg:px-24">
@@ -67,13 +93,13 @@ export default function CompareFeatures() {
           className="mt-10 md:mt-20 max-w-2xl mb-10"
         >
           <p className="text-xs font-semibold tracking-[0.25em] text-[#155863] mb-4 uppercase">
-            Compare Every Tier
+            {data.subheadline}
           </p>
           <h3 className="font-heading text-2xl md:text-[2.5rem] leading-[1.1] tracking-tightest text-[#111416]">
-            The Feature Ledger.
+            {data.headline}
           </h3>
           <p className="mt-4 text-[#6B8185] leading-[1.6]">
-            No hidden surprises. Detailed side-by-side comparison of every plan feature.
+            {data.description}
           </p>
         </motion.div>
 
@@ -96,11 +122,11 @@ export default function CompareFeatures() {
               </tr>
             </thead>
             <tbody>
-              {features.map((section, sIdx) => (
+              {data.categories.map((section, sIdx) => (
                 <React.Fragment key={sIdx}>
                   <tr>
                     <td colSpan={5} className="bg-[#17343A]/5 px-5 py-3 text-[10px] font-semibold tracking-[0.2em] uppercase text-[#6B8185]">
-                      {section.category}
+                      {section.name}
                     </td>
                   </tr>
                   {section.items.map((item, iIdx) => (
