@@ -5,6 +5,9 @@ import Architecture from "@/components/sections/Architecture";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Enterprise from "@/components/sections/Enterprise";
 import Gallery from "@/components/sections/Gallery";
+import Pricing from "@/components/sections/Pricing";
+import CompareFeatures from "@/components/sections/CompareFeatures";
+import Marketplace from "@/components/sections/Marketplace";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
@@ -17,6 +20,9 @@ export default function Home() {
       <HowItWorks />
       <Enterprise />
       <Gallery />
+      <Pricing />
+      <CompareFeatures />
+      <Marketplace />
       <Footer />
     </main>
   );

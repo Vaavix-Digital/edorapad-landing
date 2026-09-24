@@ -31,7 +31,7 @@ const galleryItems = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="w-full bg-[#F5FAF9] py-24 md:py-36 border-t border-[#111416]/10">
+    <section id="gallery" className="w-full bg-[#F5FAF9] pt-24 md:pt-36 pb-16 md:pb-24 border-t border-[#111416]/10">
       <div className="w-full max-w-[120rem] mx-auto px-6 md:px-16 lg:px-24">
         
         <motion.div 
