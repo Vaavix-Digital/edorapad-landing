@@ -1,11 +1,38 @@
+"use client";
+
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
+// Array of images for the carousel
+// You can replace these with the actual paths to your 3 images in the public folder
+const carouselImages = [
+  "/Screenshot 2026-09-24 093118.png", // Institute Dashboard
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200", // Students / Collaborative learning
+  "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=1200"  // Education / Classroom setting
+];
 
 export default function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-advance the carousel every 4 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="relative w-full pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden bg-[#F5FAF9]">
+    <section className="relative w-full pt-20 pb-24 md:pt-28 md:pb-32 overflow-hidden bg-[#F5FAF9]">
       <div className="w-full max-w-[120rem] mx-auto px-6 md:px-16 lg:px-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-end">
-          <div className="lg:col-span-8" style={{ opacity: 1, transform: 'none' }}>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="lg:col-span-8"
+          >
             <p className="text-xs md:text-sm font-semibold tracking-[0.25em] text-[#155863] mb-6 uppercase">
               Edorapad — Educational Operating System
             </p>
@@ -29,36 +56,43 @@ export default function Hero() {
                 Explore the System
               </Link>
             </div>
-          </div>
-          <div className="lg:col-span-4" style={{ opacity: 1, transform: 'none' }}>
-            <div className="relative w-full aspect-[4/3] border border-[#17343A]/15 overflow-hidden bg-[#17343A] rounded-xl shadow-lg">
-              <div className="absolute inset-0" style={{ opacity: 1, transform: 'none' }}>
-                <span
-                  className="inline-block relative w-full h-full"
-                  data-base44-image=""
-                  data-base44-image-src="https://media.base44.com/images/public/user_6a857d349dc49710b92336d0/9bd4b11a5_WhatsAppImage2026-09-22at0936101.jpeg"
-                >
-                  <span className="block relative w-full h-full overflow-hidden">
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="lg:col-span-4"
+          >
+            <div className="relative w-full aspect-[4/3] border border-[#17343A]/15 overflow-hidden bg-[#17343A] rounded-xl shadow-lg group">
+              <div className="absolute inset-0 flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                {carouselImages.map((src, index) => (
+                  <div key={index} className="min-w-full h-full relative">
                     <img
-                      src="https://media.base44.com/images/public/user_6a857d349dc49710b92336d0/9bd4b11a5_WhatsAppImage2026-09-22at0936101.jpeg/v1/fill/w_391,h_293,al_c,q_90,usm_0.66_1.00_0.01,enc_webp,quality_auto/9bd4b11a5_WhatsAppImage2026-09-22at0936101.webp"
-                      srcSet="https://media.base44.com/images/public/user_6a857d349dc49710b92336d0/9bd4b11a5_WhatsAppImage2026-09-22at0936101.jpeg/v1/fill/w_391,h_293,al_c,q_90,usm_0.66_1.00_0.01,enc_webp,quality_auto/9bd4b11a5_WhatsAppImage2026-09-22at0936101.webp 1x, https://media.base44.com/images/public/user_6a857d349dc49710b92336d0/9bd4b11a5_WhatsAppImage2026-09-22at0936101.jpeg/v1/fill/w_781,h_585,al_c,q_90,usm_0.66_1.00_0.01,enc_webp,quality_auto/9bd4b11a5_WhatsAppImage2026-09-22at0936101.webp 2x, https://media.base44.com/images/public/user_6a857d349dc49710b92336d0/9bd4b11a5_WhatsAppImage2026-09-22at0936101.jpeg/v1/fill/w_1172,h_878,al_c,q_90,usm_0.66_1.00_0.01,enc_webp,quality_auto/9bd4b11a5_WhatsAppImage2026-09-22at0936101.webp 3x"
-                      loading="lazy"
-                      className="w-full h-full inset-0 absolute object-cover"
-                      alt="Edorapad platform preview"
+                      src={src}
+                      loading={index === 0 ? "eager" : "lazy"}
+                      className="w-full h-full object-cover"
+                      alt={`Edorapad platform preview ${index + 1}`}
                     />
-                  </span>
-                </span>
+                  </div>
+                ))}
               </div>
-              <div className="absolute bottom-4 left-4 flex gap-2">
-                <span className="h-1 rounded-full transition-all duration-500 w-1.5 bg-[#F5FAF9]/40"></span>
-                <span className="h-1 rounded-full transition-all duration-500 w-1.5 bg-[#F5FAF9]/40"></span>
-                <span className="h-1 rounded-full transition-all duration-500 w-6 bg-[#F5FAF9]"></span>
+              <div className="absolute bottom-4 left-4 flex gap-2 z-10">
+                {carouselImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`h-1.5 rounded-full transition-all duration-500 ${
+                      currentSlide === index ? 'w-6 bg-[#F5FAF9]' : 'w-1.5 bg-[#F5FAF9]/40 hover:bg-[#F5FAF9]/70'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
             <p className="mt-4 text-xs tracking-[0.15em] uppercase text-[#6B8185]">
               Live Institute Dashboard — Real-Time Sync
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
