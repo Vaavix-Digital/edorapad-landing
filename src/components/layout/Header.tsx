@@ -12,10 +12,10 @@ export default function Header() {
         </div>
         
         <nav className="hidden md:flex gap-8 items-center">
-          <Link href="#features" className="text-sm font-medium text-[#111416]/80 hover:text-[#111416] transition-colors tracking-wide">Features</Link>
-          <Link href="#for-you" className="text-sm font-medium text-[#111416]/80 hover:text-[#111416] transition-colors tracking-wide">For You</Link>
-          <Link href="#how-it-works" className="text-sm font-medium text-[#111416]/80 hover:text-[#111416] transition-colors tracking-wide">How It Works</Link>
-          <Link href="#pricing" className="text-sm font-medium text-[#111416]/80 hover:text-[#111416] transition-colors tracking-wide">Pricing</Link>
+          <Link href="/#features" className="text-sm font-medium text-[#111416]/80 hover:text-[#111416] transition-colors tracking-wide">Features</Link>
+          <Link href="/#audience" className="text-sm font-medium text-[#111416]/80 hover:text-[#111416] transition-colors tracking-wide">For You</Link>
+          <Link href="/#how-it-works" className="text-sm font-medium text-[#111416]/80 hover:text-[#111416] transition-colors tracking-wide">How It Works</Link>
+          <Link href="/#pricing" className="text-sm font-medium text-[#111416]/80 hover:text-[#111416] transition-colors tracking-wide">Pricing</Link>
         </nav>
         
         <div className="flex items-center gap-2">

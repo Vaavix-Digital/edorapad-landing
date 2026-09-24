@@ -42,9 +42,9 @@ export default function Footer() {
         <div>
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#FBFBF9]/40 mb-4">Product</p>
           <ul className="space-y-3">
-            <li><a href="#features" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Features</a></li>
-            <li><a href="#architecture" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Architecture</a></li>
-            <li><a href="#pricing" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Pricing</a></li>
+            <li><a href="/#features" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Features</a></li>
+            <li><a href="/#architecture" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Architecture</a></li>
+            <li><a href="/#pricing" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Pricing</a></li>
           </ul>
         </div>
         
@@ -53,7 +53,7 @@ export default function Footer() {
           <ul className="space-y-3">
             <li><a href="#" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">About</a></li>
             <li><a href="#" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Careers</a></li>
-            <li><a href="#contact" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Contact</a></li>
+            <li><a href="/#contact" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Contact</a></li>
           </ul>
         </div>
         
@@ -69,7 +69,7 @@ export default function Footer() {
         <div>
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#FBFBF9]/40 mb-4">Legal</p>
           <ul className="space-y-3">
-            <li><a href="#" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Privacy Policy</a></li>
+            <li><a href="/privacy-policy" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Privacy Policy</a></li>
             <li><a href="#" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Terms of Service</a></li>
             <li><a href="#" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">SLA</a></li>
           </ul>
