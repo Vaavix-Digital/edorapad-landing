@@ -7,9 +7,9 @@ import { motion } from 'framer-motion';
 // Array of images for the carousel
 // You can replace these with the actual paths to your 3 images in the public folder
 const carouselImages = [
-  "/Screenshot 2026-09-24 093118.png", // Institute Dashboard
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200", // Students / Collaborative learning
-  "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=1200"  // Education / Classroom setting
+  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200", // Dashboard / Analytics
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200", // Interface / Tech data
+  "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=1200"  // Collaborative administration
 ];
 
 export default function Hero() {

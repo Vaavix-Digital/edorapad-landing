@@ -6,13 +6,13 @@ const galleryItems = [
   {
     title: "Course Timeline",
     description: "A structured lesson journey with progress tracking for every cohort.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&q=80&w=1200",
     alt: "Course Timeline"
   },
   {
     title: "Attendance Ledger",
     description: "Institutional-grade attendance records, AI-verified and tamper-proof.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200",
     alt: "Attendance Ledger"
   },
   {
