@@ -63,7 +63,7 @@ export default function Marketplace() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-[#17343A]/15 bg-white mb-16">
           
-          {data.plans.map((plan, idx) => {
+          {data.plans.map((plan: any, idx: number) => {
             const isElite = plan.id === "ELITE";
             
             // Format fee dynamically based on currency
