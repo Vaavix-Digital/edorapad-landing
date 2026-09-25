@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-// Fallback data while API loads (or if it fails)
-const initialPricingData = {
+// Exact API Response from User
+const pricingData = {
   success: true,
   data: {
     country: { code: "IN", name: "India" },
@@ -128,26 +128,8 @@ const initialPricingData = {
 };
 
 export default function Pricing() {
-  const [data, setData] = useState(initialPricingData.data);
+  const { data } = pricingData;
   const [isAnnual, setIsAnnual] = useState(true);
-
-  useEffect(() => {
-    const fetchPricing = async () => {
-      try {
-        const response = await fetch('https://server.edorapad.com/api/pricing/institute');
-        if (response.ok) {
-          const result = await response.json();
-          if (result.success && result.data) {
-            setData(result.data);
-          }
-        }
-      } catch (error) {
-        console.error("Failed to fetch pricing data:", error);
-      }
-    };
-    
-    fetchPricing();
-  }, []);
 
   return (
     <section id="pricing" className="w-full bg-[#F5FAF9] pt-16 md:pt-24 pb-24 md:pb-36">
