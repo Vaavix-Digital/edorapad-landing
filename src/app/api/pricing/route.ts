@@ -31,7 +31,7 @@ export async function GET(request: Request) {
     if (json.success && json.data) {
       const { country, countrySource, currency, fx, institute, courseCreator } = json.data;
       
-      const specificData = type === 'marketplace' || type === 'creator' ? courseCreator : institute;
+      const specificData = (type === 'courseCreator' || type === 'marketplace' || type === 'creator') ? courseCreator : institute;
       
       return NextResponse.json({
         success: true,

@@ -4,116 +4,16 @@ import { motion } from 'framer-motion';
 
 import { useState, useEffect } from 'react';
 
-// Fallback data while API loads (or if it fails)
-const initialMarketplaceData = {
-  "success": true,
-  "data": {
-    "country": {
-      "code": "US",
-      "name": "United States"
-    },
-    "currency": "USD",
-    "fx": {
-      "baseCurrency": "INR",
-      "targetCurrency": "USD",
-      "rate": 0.010415,
-      "provider": "fallback-api",
-      "fetchedAt": "2026-09-25T08:58:46.570Z",
-      "stale": false,
-      "converted": true,
-      "disclaimer": "Converted from INR at the live market rate and rounded. Billing is in INR; the amount charged may differ slightly with the rate on the day."
-    },
-    "headline": "Selling plans for tutors and course creators listing on Edorapad",
-    "plans": [
-      {
-        "id": "BASIC",
-        "name": "Basic",
-        "currency": "USD",
-        "monthlyFee": 0,
-        "feeLabel": "Free",
-        "commissionPercent": 18,
-        "commissionRate": 0.18,
-        "commissionLabel": "18% per sale",
-        "includes": [
-          "Course listing",
-          "Payment processing",
-          "Basic analytics",
-          "Standard support"
-        ]
-      },
-      {
-        "id": "PRO",
-        "name": "Pro",
-        "currency": "USD",
-        "monthlyFee": 10,
-        "feeLabel": "$10/mo",
-        "commissionPercent": 10,
-        "commissionRate": 0.1,
-        "commissionLabel": "10% per sale",
-        "includes": [
-          "Everything in Basic",
-          "Priority placement in search",
-          "Coupon/discount tools",
-          "Advanced analytics",
-          "Email marketing tools"
-        ]
-      },
-      {
-        "id": "ELITE",
-        "name": "Elite",
-        "currency": "USD",
-        "monthlyFee": 52,
-        "feeLabel": "$52/mo",
-        "commissionPercent": 5,
-        "commissionRate": 0.05,
-        "commissionLabel": "5% per sale",
-        "includes": [
-          "Everything in Pro",
-          "Dedicated creator storefront (custom subdomain)",
-          "Bulk course upload",
-          "Custom certificates",
-          "Dedicated account manager"
-        ]
-      }
-    ],
-    "addOns": [
-      {
-        "id": "FEATURED_LISTING",
-        "name": "Featured listing — homepage/category placement",
-        "unit": "month",
-        "currency": "USD",
-        "price": 52,
-        "priceLabel": "$52/mo"
-      }
-    ],
-    "terms": {
-      "payoutCycle": {
-        "description": "15 days, direct bank transfer.",
-        "days": 15,
-        "method": "Direct bank transfer"
-      },
-      "institutionalCreators": {
-        "description": "Schools listing their own paid courses get the 5% Elite rate automatically when already on a Growth/Institution subscription — no separate marketplace fee stacking.",
-        "qualifyingPackages": [
-          "GROWTH",
-          "INSTITUTION"
-        ],
-        "effectiveCommissionPercent": 5
-      }
-    },
-    "countrySource": "geolocation"
-  }
-};
-
 export default function Marketplace() {
-  const [data, setData] = useState(initialMarketplaceData.data);
+  // @ts-ignore
+  const [data, setData] = useState<any>(null);
 
   useEffect(() => {
     const fetchMarketplacePricing = async () => {
       try {
         // Fetch from internal Next.js proxy route to bypass browser CORS errors
-        // Pass type=marketplace so it maps to the correct backend endpoint
-        const response = await fetch('/api/pricing?type=marketplace');
+        // Pass type=courseCreator so it maps to the correct backend endpoint
+        const response = await fetch('/api/pricing?type=courseCreator');
         if (response.ok) {
           const result = await response.json();
           if (result.success && result.data) {
@@ -127,6 +27,17 @@ export default function Marketplace() {
     
     fetchMarketplacePricing();
   }, []);
+
+  if (!data) {
+    return (
+      <section id="marketplace" className="w-full bg-[#F5FAF9] py-24 md:py-36 min-h-[50vh] flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center gap-4">
+          <div className="w-8 h-8 border-4 border-[#49A796] border-t-transparent rounded-full animate-spin"></div>
+          <p className="text-sm text-[#155863] font-medium tracking-wide animate-pulse">Loading localized pricing...</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="marketplace" className="w-full bg-[#F5FAF9] py-24 md:py-36">
@@ -184,7 +95,7 @@ export default function Marketplace() {
               <p className="text-[#155863] font-semibold text-sm mb-6">{plan.commissionLabel}</p>
               
               <ul className="space-y-3 mt-4 text-[#6B8185] leading-[1.6] text-sm flex-1">
-                {plan.includes.map((item, i) => (
+                {plan.includes.map((item: string, i: number) => (
                   <li key={i} className="flex gap-2">
                     <span className="text-[#49A796] mt-0.5 shrink-0">•</span>
                     <span>{item}</span>
@@ -204,7 +115,7 @@ export default function Marketplace() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="grid grid-cols-1 md:grid-cols-1 gap-px bg-[#17343A]/10 border border-[#17343A]/15 max-w-xl"
         >
-          {data.addOns.map((addon, idx) => (
+          {data.addOns?.map((addon: any, idx: number) => (
             <div key={idx} className="bg-white p-6 flex items-center justify-between">
               <span className="text-sm text-[#111416]/80">{addon.name}</span>
               <span className="text-sm font-semibold text-[#155863] shrink-0 ml-4">{addon.priceLabel}</span>
