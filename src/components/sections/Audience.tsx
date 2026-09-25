@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const tabData: Record<string, { heading: string; description: string; features: string[] }> = {
@@ -60,6 +60,18 @@ const tabs = Object.keys(tabData);
 
 export default function Audience() {
   const [activeTab, setActiveTab] = useState("Institutes");
+  
+  // Auto-cycle through the tabs every 4 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveTab((prev) => {
+        const currentIndex = tabs.indexOf(prev);
+        return tabs[(currentIndex + 1) % tabs.length];
+      });
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [activeTab]);
+
   const content = tabData[activeTab];
 
   return (
