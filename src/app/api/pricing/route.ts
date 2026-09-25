@@ -7,7 +7,11 @@ export async function GET(request: Request) {
     const realIp = request.headers.get('x-real-ip');
     const clientIp = forwardedFor ? forwardedFor.split(',')[0] : (realIp || '');
 
-    const response = await fetch('https://server.edorapad.com/api/pricing/institute', {
+    const { searchParams } = new URL(request.url);
+    const type = searchParams.get('type') || 'institute';
+    const apiUrl = `https://server.edorapad.com/api/pricing/${type}`;
+
+    const response = await fetch(apiUrl, {
       headers: {
         'x-forwarded-for': clientIp,
         'x-real-ip': clientIp,
