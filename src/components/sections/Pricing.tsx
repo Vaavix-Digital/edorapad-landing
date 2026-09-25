@@ -104,14 +104,6 @@ const pricingData = {
         currency: "INR",
         price: 3000,
         priceLabel: "₹3,000/mo"
-      },
-      {
-        id: "EXTRA_FACIAL_DEVICE",
-        name: "Extra facial-verification device",
-        unit: "device/month",
-        currency: "INR",
-        price: 500,
-        priceLabel: "₹500/device/mo"
       }
     ],
     terms: {
@@ -293,7 +285,7 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#17343A]/10 border border-[#17343A]/15"
+          className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#17343A]/10 border border-[#17343A]/15"
         >
           {data.addOns.map((addon, idx) => {
             let displayPrice = addon.priceLabel;
