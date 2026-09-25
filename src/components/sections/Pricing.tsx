@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-// Exact API Response from User
-const pricingData = {
+// Fallback data while API loads (or if it fails)
+const initialPricingData = {
   success: true,
   data: {
     country: { code: "IN", name: "India" },
@@ -128,8 +128,26 @@ const pricingData = {
 };
 
 export default function Pricing() {
-  const { data } = pricingData;
+  const [data, setData] = useState(initialPricingData.data);
   const [isAnnual, setIsAnnual] = useState(true);
+
+  useEffect(() => {
+    const fetchPricing = async () => {
+      try {
+        const response = await fetch('https://server.edorapad.com/api/pricing/institute');
+        if (response.ok) {
+          const result = await response.json();
+          if (result.success && result.data) {
+            setData(result.data);
+          }
+        }
+      } catch (error) {
+        console.error("Failed to fetch pricing data:", error);
+      }
+    };
+    
+    fetchPricing();
+  }, []);
 
   return (
     <section id="pricing" className="w-full bg-[#F5FAF9] pt-16 md:pt-24 pb-24 md:pb-36">
@@ -187,8 +205,9 @@ export default function Pricing() {
               mainPrice = pkg.priceLabel;
               subtext = "";
             } else {
-              // Proper currency formatting using the provided currency code and numerical values
-              const formattedPrice = new Intl.NumberFormat('en-IN', { 
+              // Dynamically set locale based on currency so USD formats as $100,000 and INR as ₹1,00,000
+              const locale = pkg.currency === 'USD' ? 'en-US' : 'en-IN';
+              const formattedPrice = new Intl.NumberFormat(locale, { 
                 style: 'currency', 
                 currency: pkg.currency || 'INR', 
                 maximumFractionDigits: 0 
