@@ -5,24 +5,49 @@ import { useState, useEffect } from 'react';
 
 // Fallback data while API loads (or if it fails)
 const initialPricingData = {
-  success: true,
-  data: {
-    country: { code: "IN", name: "India" },
-    currency: "INR",
-    headline: "Educational Operating System — ERP, LMS & Live Classrooms for institutes, tutors, students & parents",
-    packages: [
+  "success": true,
+  "data": {
+    "country": {
+      "code": "IN",
+      "name": "India"
+    },
+    "currency": "INR",
+    "fx": {
+      "baseCurrency": "INR",
+      "targetCurrency": "INR",
+      "rate": 1,
+      "provider": "fallback-api",
+      "fetchedAt": "2026-09-25T08:28:33.520Z",
+      "stale": false,
+      "converted": false,
+      "disclaimer": null
+    },
+    "headline": "Educational Operating System — ERP, LMS & Live Classrooms for institutes, tutors, students & parents",
+    "packages": [
       {
-        id: "STARTER",
-        name: "Starter",
-        studentCap: 200,
-        sizeLabel: "Up to 200 students",
-        isCustomQuote: false,
-        currency: "INR",
-        monthlyPrice: 6000,
-        priceLabel: "₹6,000/mo",
-        annualPrice: 60000,
-        annualPriceLabel: "₹60,000/yr",
-        includes: [
+        "id": "STARTER",
+        "name": "Starter",
+        "studentCap": 200,
+        "sizeLabel": "Up to 200 students",
+        "isCustomQuote": false,
+        "isPurchasable": true,
+        "description": null,
+        "features": [
+          "INSTITUTE_PORTAL",
+          "STUDENT_PORTAL",
+          "PARENT_PORTAL",
+          "TUTOR_PORTAL",
+          "ATTENDANCE",
+          "FEE_COLLECTION",
+          "BASIC_LMS",
+          "MOBILE_APP"
+        ],
+        "currency": "INR",
+        "monthlyPrice": 6000,
+        "priceLabel": "₹6,000/mo",
+        "annualPrice": 60000,
+        "annualPriceLabel": "₹60,000/yr",
+        "includes": [
           "Institute + student/parent/tutor portals",
           "Attendance",
           "Fee collection",
@@ -31,17 +56,33 @@ const initialPricingData = {
         ]
       },
       {
-        id: "GROWTH",
-        name: "Growth",
-        studentCap: 1000,
-        sizeLabel: "Up to 1,000 students",
-        isCustomQuote: false,
-        currency: "INR",
-        monthlyPrice: 18000,
-        priceLabel: "₹18,000/mo",
-        annualPrice: 180000,
-        annualPriceLabel: "₹1,80,000/yr",
-        includes: [
+        "id": "GROWTH",
+        "name": "Growth",
+        "studentCap": 1000,
+        "sizeLabel": "Up to 1,000 students",
+        "isCustomQuote": false,
+        "isPurchasable": true,
+        "description": null,
+        "features": [
+          "INSTITUTE_PORTAL",
+          "STUDENT_PORTAL",
+          "PARENT_PORTAL",
+          "TUTOR_PORTAL",
+          "ATTENDANCE",
+          "FEE_COLLECTION",
+          "BASIC_LMS",
+          "MOBILE_APP",
+          "LIVE_CLASSES",
+          "FACIAL_VERIFICATION",
+          "PAYROLL",
+          "MARKETING_LEAD_TRACKING"
+        ],
+        "currency": "INR",
+        "monthlyPrice": 18000,
+        "priceLabel": "₹18,000/mo",
+        "annualPrice": 180000,
+        "annualPriceLabel": "₹1,80,000/yr",
+        "includes": [
           "Everything in Starter",
           "Live classes",
           "AI facial verification clock-in",
@@ -50,17 +91,37 @@ const initialPricingData = {
         ]
       },
       {
-        id: "INSTITUTION",
-        name: "Institution",
-        studentCap: 5000,
-        sizeLabel: "Up to 5,000 students",
-        isCustomQuote: false,
-        currency: "INR",
-        monthlyPrice: 45000,
-        priceLabel: "₹45,000/mo",
-        annualPrice: 450000,
-        annualPriceLabel: "₹4,50,000/yr",
-        includes: [
+        "id": "INSTITUTION",
+        "name": "Institution",
+        "studentCap": 5000,
+        "sizeLabel": "Up to 5,000 students",
+        "isCustomQuote": false,
+        "isPurchasable": true,
+        "description": null,
+        "features": [
+          "INSTITUTE_PORTAL",
+          "STUDENT_PORTAL",
+          "PARENT_PORTAL",
+          "TUTOR_PORTAL",
+          "ATTENDANCE",
+          "FEE_COLLECTION",
+          "BASIC_LMS",
+          "MOBILE_APP",
+          "LIVE_CLASSES",
+          "FACIAL_VERIFICATION",
+          "PAYROLL",
+          "MARKETING_LEAD_TRACKING",
+          "MULTI_BRANCH",
+          "ADVANCED_ANALYTICS",
+          "DEDICATED_ONBOARDING",
+          "PRIORITY_SUPPORT"
+        ],
+        "currency": "INR",
+        "monthlyPrice": 45000,
+        "priceLabel": "₹45,000/mo",
+        "annualPrice": 450000,
+        "annualPriceLabel": "₹4,50,000/yr",
+        "includes": [
           "Everything in Growth",
           "Multi-branch support",
           "Advanced analytics",
@@ -69,17 +130,42 @@ const initialPricingData = {
         ]
       },
       {
-        id: "ENTERPRISE",
-        name: "Enterprise",
-        studentCap: null,
-        sizeLabel: "Unlimited / multicampus",
-        isCustomQuote: true,
-        currency: "INR",
-        monthlyPrice: null,
-        priceLabel: "Custom quote",
-        annualPrice: null,
-        annualPriceLabel: null,
-        includes: [
+        "id": "ENTERPRISE",
+        "name": "Enterprise",
+        "studentCap": null,
+        "sizeLabel": "Unlimited / multicampus",
+        "isCustomQuote": true,
+        "isPurchasable": false,
+        "description": null,
+        "features": [
+          "INSTITUTE_PORTAL",
+          "STUDENT_PORTAL",
+          "PARENT_PORTAL",
+          "TUTOR_PORTAL",
+          "ATTENDANCE",
+          "FEE_COLLECTION",
+          "BASIC_LMS",
+          "MOBILE_APP",
+          "LIVE_CLASSES",
+          "FACIAL_VERIFICATION",
+          "PAYROLL",
+          "MARKETING_LEAD_TRACKING",
+          "MULTI_BRANCH",
+          "ADVANCED_ANALYTICS",
+          "DEDICATED_ONBOARDING",
+          "PRIORITY_SUPPORT",
+          "WHITE_LABEL",
+          "API_ACCESS",
+          "SSO",
+          "CUSTOM_INTEGRATIONS",
+          "SLA_SUPPORT"
+        ],
+        "currency": "INR",
+        "monthlyPrice": null,
+        "priceLabel": "Custom quote",
+        "annualPrice": null,
+        "annualPriceLabel": null,
+        "includes": [
           "White-label option",
           "API access",
           "SSO",
@@ -88,42 +174,42 @@ const initialPricingData = {
         ]
       }
     ],
-    /* addOns: [
+    /* "addOns": [
       {
-        id: "WHATSAPP_SMS_ALERTS",
-        name: "WhatsApp / SMS fee-due alerts",
-        unit: "month",
-        currency: "INR",
-        price: 2000,
-        priceLabel: "₹2,000/mo"
+        "id": "WHATSAPP_SMS_ALERTS",
+        "name": "WhatsApp / SMS fee-due alerts",
+        "unit": "month",
+        "currency": "INR",
+        "price": 2000,
+        "priceLabel": "₹2,000/mo"
       },
       {
-        id: "ADVANCED_PAYROLL_HR",
-        name: "Advanced payroll & HR",
-        unit: "month",
-        currency: "INR",
-        price: 3000,
-        priceLabel: "₹3,000/mo"
+        "id": "ADVANCED_PAYROLL_HR",
+        "name": "Advanced payroll & HR",
+        "unit": "month",
+        "currency": "INR",
+        "price": 3000,
+        "priceLabel": "₹3,000/mo"
       }
     ], */
-    terms: {
-      overageRule: "Exceeding a package student cap moves the institute to the next tier — no per-student metering, no surprise bills.",
-      annualPlan: {
-        description: "2 months free (pay for 10, get 12) on any package.",
-        billedMonths: 10,
-        freeMonths: 2
+    "terms": {
+      "overageRule": "Exceeding a package student cap moves the institute to the next tier — no per-student metering, no surprise bills.",
+      "annualPlan": {
+        "description": "2 months free (pay for 10, get 12) on any package.",
+        "billedMonths": 10,
+        "freeMonths": 2
       },
-      foundingCustomerOffer: {
-        description: "First 30 institutes get Starter locked at ₹4,000/mo for 12 months, in exchange for a case study / testimonial.",
-        packageId: "STARTER",
-        seats: 30,
-        lockInMonths: 12,
-        currency: "INR",
-        monthlyPrice: 4000,
-        priceLabel: "₹4,000/mo"
+      "foundingCustomerOffer": {
+        "description": "First 30 institutes get Starter locked at ₹4,000/mo for 12 months, in exchange for a case study / testimonial.",
+        "packageId": "STARTER",
+        "seats": 30,
+        "lockInMonths": 12,
+        "currency": "INR",
+        "monthlyPrice": 4000,
+        "priceLabel": "₹4,000/mo"
       }
     },
-    countrySource: "geolocation"
+    "countrySource": "geolocation"
   }
 };
 
