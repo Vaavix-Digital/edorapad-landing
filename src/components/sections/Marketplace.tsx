@@ -108,20 +108,22 @@ export default function Marketplace() {
         </div>
 
         {/* Marketplace Add-ons */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="grid grid-cols-1 md:grid-cols-1 gap-px bg-[#17343A]/10 border border-[#17343A]/15 max-w-xl"
-        >
-          {data.addOns?.map((addon: any, idx: number) => (
-            <div key={idx} className="bg-white p-6 flex items-center justify-between">
-              <span className="text-sm text-[#111416]/80">{addon.name}</span>
-              <span className="text-sm font-semibold text-[#155863] shrink-0 ml-4">{addon.priceLabel}</span>
-            </div>
-          ))}
-        </motion.div>
+        {data.addOns && data.addOns.length > 0 && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="grid grid-cols-1 md:grid-cols-1 gap-px bg-[#17343A]/10 border border-[#17343A]/15 max-w-xl"
+          >
+            {data.addOns.map((addon: any, idx: number) => (
+              <div key={idx} className="bg-white p-6 flex items-center justify-between">
+                <span className="text-sm text-[#111416]/80">{addon.name}</span>
+                <span className="text-sm font-semibold text-[#155863] shrink-0 ml-4">{addon.priceLabel}</span>
+              </div>
+            ))}
+          </motion.div>
+        )}
 
       </div>
     </section>
