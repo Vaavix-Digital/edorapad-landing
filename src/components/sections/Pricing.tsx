@@ -220,7 +220,8 @@ export default function Pricing() {
   useEffect(() => {
     const fetchPricing = async () => {
       try {
-        const response = await fetch('https://server.edorapad.com/api/pricing/institute');
+        // Fetch from internal Next.js proxy route to bypass browser CORS errors
+        const response = await fetch('/api/pricing');
         if (response.ok) {
           const result = await response.json();
           if (result.success && result.data) {
