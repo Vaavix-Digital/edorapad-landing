@@ -88,7 +88,7 @@ const pricingData = {
         ]
       }
     ],
-    addOns: [
+    /* addOns: [
       {
         id: "WHATSAPP_SMS_ALERTS",
         name: "WhatsApp / SMS fee-due alerts",
@@ -105,7 +105,7 @@ const pricingData = {
         price: 3000,
         priceLabel: "₹3,000/mo"
       }
-    ],
+    ], */
     terms: {
       overageRule: "Exceeding a package student cap moves the institute to the next tier — no per-student metering, no surprise bills.",
       annualPlan: {
@@ -165,9 +165,11 @@ export default function Pricing() {
           </button>
           <span className={`text-sm font-semibold transition-colors flex items-center gap-2 ${isAnnual ? "text-[#111416]" : "text-[#6B8185]"}`}>
             Annually 
-            <span className="text-[10px] uppercase tracking-wider bg-[#49A796]/10 text-[#49A796] px-2 py-1 rounded-sm">
-              {data.terms.annualPlan.freeMonths} Months Free
-            </span>
+            {isAnnual && (
+              <span className="text-[10px] uppercase tracking-wider bg-[#49A796]/10 text-[#49A796] px-2 py-1 rounded-sm">
+                {data.terms.annualPlan.freeMonths} Months Free
+              </span>
+            )}
           </span>
         </div>
 
@@ -204,10 +206,10 @@ export default function Pricing() {
             return (
               <motion.div 
                 key={pkg.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 1.05, y: 10 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: idx * 0.1, ease: "easeOut" }}
+                transition={{ duration: 0.8, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
                 className={`relative flex flex-col p-8 md:p-10 h-full shadow-sm transition-all duration-300 ${
                   isEnterprise 
                     ? "bg-[#17343A] text-white shadow-xl" 
@@ -279,7 +281,7 @@ export default function Pricing() {
           </p>
         </motion.div>
 
-        {/* Add-ons */}
+        {/* Add-ons 
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -287,7 +289,7 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#17343A]/10 border border-[#17343A]/15"
         >
-          {data.addOns.map((addon, idx) => {
+          {data.addOns?.map((addon, idx) => {
             let displayPrice = addon.priceLabel;
             
             if (isAnnual) {
@@ -311,6 +313,7 @@ export default function Pricing() {
             );
           })}
         </motion.div>
+        */}
 
       </div>
     </section>
