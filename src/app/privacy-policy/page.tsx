@@ -59,7 +59,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-heading text-[#111416] mb-4">1. Introduction & Scope</h2>
             <p>
-              Edorapad ("Edorapad", "we", "our", or "us") operates a multi-role educational management platform comprising our website at <a href="https://edorapad.com" className="text-[#49A796] hover:underline">https://edorapad.com</a>, the Edorapad mobile application for Android and iOS devices, and related cloud services (collectively, the "Services").
+              Edorapad (&quot;Edorapad&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) operates a multi-role educational management platform comprising our website at <a href="https://edorapad.com" className="text-[#49A796] hover:underline">https://edorapad.com</a>, the Edorapad mobile application for Android and iOS devices, and related cloud services (collectively, the &quot;Services&quot;).
             </p>
             <p>
               Our platform connects educational institutions, online and offline tutors, students, parents/guardians, and administrative personnel to streamline academic scheduling, attendance tracking, classroom lectures, homework management, tuition fee records, and institutional communications.
@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
               <li><strong>Core Educational Delivery:</strong> Facilitating live online video classrooms, offline lecture scheduling, batch assignments, and course materials access.</li>
               <li><strong>Attendance & Grade Tracking:</strong> Calculating monthly attendance percentages, compiling report cards, and issuing verified certificates.</li>
               <li><strong>Institutional Administration:</strong> Enabling institutions and faculty to review leave requests, student progress, fee payments, and admissions.</li>
-              <li><strong>Parent-Institute Transparency:</strong> Providing parents visibility into their child's attendance, teacher assessments, and pending fee dues.</li>
+              <li><strong>Parent-Institute Transparency:</strong> Providing parents visibility into their child&apos;s attendance, teacher assessments, and pending fee dues.</li>
               <li><strong>Security & Authentication:</strong> Verifying user role permissions (RBAC), defending against brute-force attacks, and preventing unauthorized account sharing.</li>
               <li><strong>Platform Reliability:</strong> Monitoring application health, resolving bugs, and ensuring smooth performance on low-bandwidth networks.</li>
             </ul>
@@ -111,7 +111,7 @@ export default function PrivacyPolicy() {
               <li><strong>Notifications Permission:</strong> Used to deliver class reminders, live lecture start alerts, fee due dates, exam marks notifications, and urgent institutional broadcasts.</li>
               <li><strong>Secure Storage:</strong> Mobile authentication session tokens are stored in hardware-backed encrypted storage (iOS Keychain and Android Keystore/EncryptedSharedPreferences).</li>
             </ul>
-            <p>Users can view, grant, or revoke permissions at any time through their device's Settings menu. Revoking camera or microphone will only disable live streaming functionality while keeping other features active.</p>
+            <p>Users can view, grant, or revoke permissions at any time through their device&apos;s Settings menu. Revoking camera or microphone will only disable live streaming functionality while keeping other features active.</p>
           </section>
 
           <section>
@@ -138,22 +138,22 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-heading text-[#111416] mb-4">7. Data Sharing & Third-Party Disclosures</h2>
             <p className="mb-4">We respect the privacy of academic and personal records. We do not sell or rent personal information. Data is shared strictly under the following circumstances:</p>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>With Your Enrolled Institution:</strong> Student academic records, attendance history, and course progress are shared directly with the authorized administration and assigned faculty of the student's institution.</li>
-              <li><strong>With Verified Parents / Guardians:</strong> Parents linked to a student account can view their child's academic assessments, attendance statistics, fee records, and institutional feedback.</li>
+              <li><strong>With Your Enrolled Institution:</strong> Student academic records, attendance history, and course progress are shared directly with the authorized administration and assigned faculty of the student&apos;s institution.</li>
+              <li><strong>With Verified Parents / Guardians:</strong> Parents linked to a student account can view their child&apos;s academic assessments, attendance statistics, fee records, and institutional feedback.</li>
               <li><strong>With Infrastructure Service Providers:</strong> Trusted third-party cloud hosting providers, database providers, push notification services (Expo, Firebase), and payment gateways that process data on our behalf under strict Data Processing Agreements (DPAs).</li>
               <li><strong>Legal Requirements:</strong> When required by applicable law, regulation, subpoena, or enforceable governmental order to protect the rights, property, or safety of students, users, or the public.</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-2xl font-heading text-[#111416] mb-4">8. Children's & Student Privacy (COPPA & FERPA)</h2>
+            <h2 className="text-2xl font-heading text-[#111416] mb-4">8. Children&apos;s & Student Privacy (COPPA & FERPA)</h2>
             <p className="mb-4">Edorapad is committed to the protection of young learners. Where students under 13 (or the legal age in their jurisdiction) access the Services:</p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li>Student accounts are created either by the educational institution or under the authorization and consent of the student's parent or legal guardian.</li>
+              <li>Student accounts are created either by the educational institution or under the authorization and consent of the student&apos;s parent or legal guardian.</li>
               <li>Student personal data is used solely for educational purposes, classroom learning, and institutional administration.</li>
               <li>We do not build advertising profiles or conduct behavioral marketing targeting students of any age.</li>
             </ul>
-            <p>Parents and legal guardians have the right to inspect their child's records, request corrections, or request deletion of their child's personal information by contacting their institution or our privacy team.</p>
+            <p>Parents and legal guardians have the right to inspect their child&apos;s records, request corrections, or request deletion of their child&apos;s personal information by contacting their institution or our privacy team.</p>
           </section>
 
           <section>
@@ -164,7 +164,7 @@ export default function PrivacyPolicy() {
             <p className="mb-4">Users have the full right to delete their account and associated personal data at any time, in compliance with Google Play Store and Apple App Store policies:</p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
               <li><strong>In-App Deletion:</strong> Navigate to Settings {">"} Profile {">"} Delete Account inside the mobile application or web portal.</li>
-              <li><strong>Email Request:</strong> Send an account deletion request to <a href="mailto:privacy@edorapad.com" className="text-[#49A796] hover:underline">privacy@edorapad.com</a> from your registered email address with the subject "Account Deletion Request".</li>
+              <li><strong>Email Request:</strong> Send an account deletion request to <a href="mailto:privacy@edorapad.com" className="text-[#49A796] hover:underline">privacy@edorapad.com</a> from your registered email address with the subject &quot;Account Deletion Request&quot;.</li>
             </ul>
             <p>Upon receipt and verification of your request, your personal profile data, authentication credentials, and active tokens will be permanently removed from our active databases within 30 days. Certain academic records (such as completed course transcripts) may be archived by your enrolled institution as required by educational regulatory laws.</p>
           </section>
