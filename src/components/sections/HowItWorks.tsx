@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -38,11 +39,7 @@ export default function HowItWorks() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="group relative block w-full aspect-[16/9] border border-[#F5FAF9]/15 overflow-hidden text-left cursor-pointer"
           >
-            <img 
-              src="https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png" 
-              alt="How Edorapad works" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-            />
+            <Image src="https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png" alt="How Edorapad works" fill sizes="100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-[#17343A]/40 flex items-center justify-center transition-colors duration-500 group-hover:bg-[#17343A]/50">
               <div className="flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#F5FAF9] group-hover:bg-[#49A796] transition-colors duration-500 shadow-xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-play w-8 h-8 md:w-10 md:h-10 text-[#17343A] group-hover:text-white ml-1 transition-colors duration-500">
@@ -92,11 +89,11 @@ export default function HowItWorks() {
                 Product walkthrough coming soon
               </h3>
               <p className="text-[#F5FAF9]/70 text-lg max-w-lg mb-10 leading-[1.6]">
-                We're putting the final polish on the Edorapad demo video. In the meantime, explore the platform features or start your free trial.
+                We&apos;re putting the final polish on the Edorapad demo video. In the meantime, explore the platform features or start your free trial.
               </p>
               
               <Link 
-                href="/pricing" 
+                href="/#pricing" 
                 onClick={() => setIsVideoModalOpen(false)}
                 className="inline-flex items-center px-8 py-3.5 bg-white text-[#111416] text-sm font-semibold tracking-wide hover:bg-gray-200 transition-colors duration-300 rounded-sm"
               >
