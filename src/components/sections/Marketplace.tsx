@@ -3,10 +3,36 @@
 import { motion } from 'framer-motion';
 
 import { useState, useEffect } from 'react';
+import { appUrl } from '@/lib/appUrl';
+
+/** Course-creator marketplace pricing, as served by `/api/pricing?type=courseCreator`. */
+interface CreatorPlan {
+  id: string;
+  name: string;
+  currency: string;
+  monthlyFee: number;
+  feeLabel: string;
+  commissionLabel: string;
+  includes: string[];
+}
+
+interface CreatorAddOn {
+  name: string;
+  priceLabel: string;
+}
+
+interface MarketplacePricing {
+  headline: string;
+  plans: CreatorPlan[];
+  addOns: CreatorAddOn[];
+  terms: {
+    payoutCycle: { days: number; method: string };
+    institutionalCreators: { description: string };
+  };
+}
 
 export default function Marketplace() {
-  // @ts-ignore
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<MarketplacePricing | null>(null);
 
   useEffect(() => {
     const fetchMarketplacePricing = async () => {
@@ -63,8 +89,7 @@ export default function Marketplace() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-[#17343A]/15 bg-white mb-16">
           
-          {data.plans.map((plan: any, idx: number) => {
-            const isElite = plan.id === "ELITE";
+          {data.plans.map((plan, idx) => {
             
             // Format fee dynamically based on currency
             const locale = plan.currency === 'USD' ? 'en-US' : 'en-IN';
@@ -102,6 +127,14 @@ export default function Marketplace() {
                   </li>
                 ))}
               </ul>
+
+              {/* Sign-up in the web app is locked to a Course Creator account for these plans. */}
+              <a
+                href={appUrl(`/checkout?type=creator&plan=${plan.id}`)}
+                className="mt-8 text-center py-3.5 text-sm font-medium tracking-wide transition-colors duration-300 bg-[#155863] text-white hover:bg-[#49A796]"
+              >
+                {plan.monthlyFee > 0 ? `Start with ${plan.name}` : 'Start for free'}
+              </a>
             </motion.div>
           )})}
 
@@ -116,7 +149,7 @@ export default function Marketplace() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="grid grid-cols-1 md:grid-cols-1 gap-px bg-[#17343A]/10 border border-[#17343A]/15 max-w-xl"
           >
-            {data.addOns.map((addon: any, idx: number) => (
+            {data.addOns.map((addon, idx) => (
               <div key={idx} className="bg-white p-6 flex items-center justify-between">
                 <span className="text-sm text-[#111416]/80">{addon.name}</span>
                 <span className="text-sm font-semibold text-[#155863] shrink-0 ml-4">{addon.priceLabel}</span>
