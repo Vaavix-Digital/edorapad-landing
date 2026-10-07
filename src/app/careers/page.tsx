@@ -52,7 +52,7 @@ export default function Careers() {
             Build the Future of Education
           </h1>
           <p className="text-[#6B8185] leading-[1.6] text-lg max-w-2xl mx-auto">
-            At Edorapad, we are engineering the ultimate Educational Operating System. We are looking for passionate, driven individuals to help us synchronize the world's educational institutions.
+            At Edorapad, we are engineering the ultimate Educational Operating System. We are looking for passionate, driven individuals to help us synchronize the world&apos;s educational institutions.
           </p>
         </header>
 
@@ -96,9 +96,9 @@ export default function Careers() {
           </div>
           
           <div className="mt-12 text-center p-8 bg-[#FBFBF9] border border-[#111416]/5 rounded-lg">
-            <p className="text-[#6B8185] mb-4">Don't see a role that fits?</p>
+            <p className="text-[#6B8185] mb-4">Don&apos;t see a role that fits?</p>
             <p className="text-sm text-[#4A5568]">
-              Send your resume and a brief intro to <a href="mailto:careers@edorapad.com" className="text-[#49A796] font-medium hover:underline">careers@edorapad.com</a> and we'll keep you in mind for future openings.
+              Send your resume and a brief intro to <a href="mailto:careers@edorapad.com" className="text-[#49A796] font-medium hover:underline">careers@edorapad.com</a> and we&apos;ll keep you in mind for future openings.
             </p>
           </div>
         </section>
