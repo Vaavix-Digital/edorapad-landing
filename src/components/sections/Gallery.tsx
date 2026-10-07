@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const galleryItems = [
@@ -63,12 +64,7 @@ export default function Gallery() {
               className="group block text-left border border-[#17343A]/15 overflow-hidden bg-[#111416] shadow-sm hover:shadow-lg transition-all duration-500"
             >
               <div className="relative w-full aspect-[4/3] overflow-hidden">
-                <img 
-                  src={item.image}
-                  loading="lazy"
-                  className="w-full h-full inset-0 absolute object-cover transition-transform duration-700 group-hover:scale-105" 
-                  alt={item.alt}
-                />
+                <Image src={item.image} fill sizes="(min-width: 768px) 25vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" alt={item.alt} />
                 <div className="absolute inset-0 bg-[#17343A]/0 group-hover:bg-[#17343A]/40 transition-colors duration-500"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[#111416]/90 via-[#111416]/50 to-transparent">
                   <p className="font-heading text-xl md:text-2xl text-[#F5FAF9] translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
