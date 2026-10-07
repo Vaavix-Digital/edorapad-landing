@@ -25,7 +25,7 @@ export default function SLA() {
             Service Level Agreement
           </h1>
           <p className="text-[#6B8185] leading-[1.6] text-lg">
-            This Service Level Agreement (SLA) defines the availability, reliability, and support commitments for Edorapad's cloud-based educational infrastructure.
+            This Service Level Agreement (SLA) defines the availability, reliability, and support commitments for Edorapad&apos;s cloud-based educational infrastructure.
           </p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm font-medium text-[#111416]/60">
             <span>Effective Date: September 25, 2026</span>
