@@ -97,7 +97,7 @@ export default function Updates() {
               </p>
               
               <div className="bg-[#F5FAF9] p-5 rounded-lg border border-[#155863]/10">
-                <h3 className="text-sm font-bold text-[#155863] mb-3 uppercase tracking-wider">What's New</h3>
+                <h3 className="text-sm font-bold text-[#155863] mb-3 uppercase tracking-wider">What&apos;s New</h3>
                 <ul className="list-disc pl-5 space-y-2 text-[#4A5568] text-sm">
                   {update.changes.map((change, i) => (
                     <li key={i}>{change}</li>
