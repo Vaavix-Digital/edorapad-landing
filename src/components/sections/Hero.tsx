@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -67,12 +68,7 @@ export default function Hero() {
               <div className="absolute inset-0 flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
                 {carouselImages.map((src, index) => (
                   <div key={index} className="min-w-full h-full relative">
-                    <img
-                      src={src}
-                      loading={index === 0 ? "eager" : "lazy"}
-                      className="w-full h-full object-cover"
-                      alt={`Edorapad platform preview ${index + 1}`}
-                    />
+                    <Image src={src} fill priority={index === 0} sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" alt={`Edorapad platform preview ${index + 1}`} />
                   </div>
                 ))}
               </div>
