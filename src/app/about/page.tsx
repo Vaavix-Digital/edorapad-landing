@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const metadata = {
   title: "About Us | Edorapad",
@@ -58,7 +57,7 @@ export default function AboutUs() {
               </div>
               <div className="bg-[#F5FAF9] p-8 rounded-xl border border-[#155863]/10">
                 <h3 className="font-heading text-xl text-[#111416] mb-3">Parents & Guardians</h3>
-                <p className="text-[#6B8185] leading-[1.6]">Monitor your child's attendance in real-time, review exam results, track the class schedule, and receive instant institutional notifications.</p>
+                <p className="text-[#6B8185] leading-[1.6]">Monitor your child&apos;s attendance in real-time, review exam results, track the class schedule, and receive instant institutional notifications.</p>
               </div>
             </div>
           </section>
@@ -66,10 +65,10 @@ export default function AboutUs() {
           <section className="mb-12">
             <h2 className="text-2xl font-heading text-[#111416] mb-6">Security & Technology</h2>
             <p className="text-lg mb-6">
-              Education requires absolute trust. That's why Edorapad is engineered using modern, secure technologies including TLS 1.3 encryption, scalable cloud databases, and PCI-DSS compliant payment gateways like Razorpay and Stripe. 
+              Education requires absolute trust. That&apos;s why Edorapad is engineered using modern, secure technologies including TLS 1.3 encryption, scalable cloud databases, and PCI-DSS compliant payment gateways like Razorpay and Stripe. 
             </p>
             <p className="text-lg">
-              We've also pioneered the integration of <strong>camera-based face verification</strong> for tutor and staff logins, ensuring that classroom attendance and payroll metrics are tamper-proof and cryptographically secure.
+              We&apos;ve also pioneered the integration of <strong>camera-based face verification</strong> for tutor and staff logins, ensuring that classroom attendance and payroll metrics are tamper-proof and cryptographically secure.
             </p>
           </section>
 
