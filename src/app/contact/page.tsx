@@ -24,7 +24,7 @@ export default function Contact() {
               Get in Touch
             </p>
             <h1 className="font-heading text-4xl md:text-5xl leading-tight text-[#111416] mb-6">
-              Let's talk about your institution.
+              Let&apos;s talk about your institution.
             </h1>
             <p className="text-[#6B8185] leading-[1.6] text-lg mb-10">
               Whether you need a custom enterprise quote, have technical questions, or want to schedule a personalized demo, our team is ready to help.
