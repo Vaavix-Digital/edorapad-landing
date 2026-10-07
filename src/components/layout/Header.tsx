@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { appUrl } from '@/lib/appUrl';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,8 +26,8 @@ export default function Header() {
         
         <div className="flex items-center gap-2">
           {/* Desktop Auth Buttons */}
-          <Link href="https://app.edorapad.com/login" className="hidden md:inline-flex text-sm font-medium px-5 py-2.5 text-[#111416] hover:text-[#155863] transition-colors">Log in</Link>
-          <Link href="https://app.edorapad.com/register" className="hidden md:inline-flex text-sm font-medium px-5 py-2.5 bg-[#111416] text-[#FBFBF9] hover:bg-[#155863] transition-colors duration-300">Sign up</Link>
+          <a href={appUrl('/login')} className="hidden md:inline-flex text-sm font-medium px-5 py-2.5 text-[#111416] hover:text-[#155863] transition-colors">Log in</a>
+          <a href={appUrl('/register')} className="hidden md:inline-flex text-sm font-medium px-5 py-2.5 bg-[#111416] text-[#FBFBF9] hover:bg-[#155863] transition-colors duration-300">Sign up</a>
           
           {/* Mobile Menu Lines Toggle */}
           <button 
@@ -48,8 +49,8 @@ export default function Header() {
         <Link href="/#how-it-works" onClick={() => setIsMenuOpen(false)} className="text-base font-medium text-[#111416]/80 hover:text-[#111416] py-2">How It Works</Link>
         <Link href="/#pricing" onClick={() => setIsMenuOpen(false)} className="text-base font-medium text-[#111416]/80 hover:text-[#111416] py-2">Pricing</Link>
         <div className="h-px w-full bg-gray-100 my-2"></div>
-        <Link href="https://app.edorapad.com/login" onClick={() => setIsMenuOpen(false)} className="text-base font-medium text-[#111416] py-2">Log in</Link>
-        <Link href="https://app.edorapad.com/register" onClick={() => setIsMenuOpen(false)} className="text-base font-medium text-[#155863] py-2">Sign up</Link>
+        <a href={appUrl('/login')} onClick={() => setIsMenuOpen(false)} className="text-base font-medium text-[#111416] py-2">Log in</a>
+        <a href={appUrl('/register')} onClick={() => setIsMenuOpen(false)} className="text-base font-medium text-[#155863] py-2">Sign up</a>
       </div>
     </header>
   );
