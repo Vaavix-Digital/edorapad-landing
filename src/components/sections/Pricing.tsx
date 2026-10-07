@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { appUrl } from '@/lib/appUrl';
 
 // Fallback data while API loads (or if it fails)
 const initialPricingData = {
@@ -354,8 +355,8 @@ export default function Pricing() {
                 </ul>
                 
                 <a 
-                  href={isEnterprise ? "#contact" : "https://www.app.edorapad.com/"}
-                  target={isEnterprise ? undefined : "_blank"}
+                  href={isEnterprise ? "#contact" : appUrl(`/checkout?type=institute&plan=${pkg.id}&billing=${isAnnual ? 'annual' : 'monthly'}`)}
+                  target={isEnterprise ? undefined : "_self"}
                   rel={isEnterprise ? undefined : "noopener noreferrer"}
                   className={`text-center py-3.5 text-sm font-medium tracking-wide transition-colors duration-300 ${
                     isEnterprise
