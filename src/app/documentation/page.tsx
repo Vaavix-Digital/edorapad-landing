@@ -136,7 +136,7 @@ export default function Documentation() {
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>School Principals & Institute Owners:</strong> Run Your Entire Institution on One Unified Platform.</li>
               <li><strong>Tutors & Coaching Academies:</strong> Teach Without Boundaries — Online, Offline, or Hybrid.</li>
-              <li><strong>Parents:</strong> Never Miss a Beat in Your Child's Education.</li>
+              <li><strong>Parents:</strong> Never Miss a Beat in Your Child&apos;s Education.</li>
               <li><strong>Students:</strong> Your Entire Academic World in Your Pocket.</li>
             </ul>
           </section>
