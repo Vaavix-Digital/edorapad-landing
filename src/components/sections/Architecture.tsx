@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function Architecture() {
@@ -18,12 +19,7 @@ export default function Architecture() {
             <div className="border border-[#F5FAF9]/15 aspect-[4/3] overflow-hidden">
               <span className="inline-block relative w-full h-full">
                 <span className="block relative w-full h-full overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" 
-                    loading="lazy" 
-                    className="w-full h-full inset-0 absolute object-cover" 
-                    alt="Structural knowledge layers - Data sync visualization" 
-                  />
+                  <Image src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" alt="Structural knowledge layers - Data sync visualization" />
                 </span>
               </span>
             </div>
