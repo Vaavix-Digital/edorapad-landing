@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function Enterprise() {
@@ -15,12 +16,8 @@ export default function Enterprise() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="lg:col-span-6"
           >
-            <div className="border border-[#17343A]/15 aspect-[4/3] overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1200" 
-                alt="Premium academic research space" 
-                className="w-full h-full object-cover" 
-              />
+            <div className="relative border border-[#17343A]/15 aspect-[4/3] overflow-hidden">
+              <Image src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1200" alt="Premium academic research space" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
             </div>
           </motion.div>
           
