@@ -40,7 +40,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-heading text-[#111416] mb-4">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using the Edorapad website (<a href="https://edorapad.com" className="text-[#49A796] hover:underline">https://edorapad.com</a>), the web portal (<a href="https://app.edorapad.com" className="text-[#49A796] hover:underline">https://app.edorapad.com</a>), or our mobile applications (collectively, the "Platform"), you agree to be bound by these Terms of Service. If you are accepting these terms on behalf of an educational institution, you represent that you have the authority to bind that institution to these terms.
+              By accessing or using the Edorapad website (<a href="https://edorapad.com" className="text-[#49A796] hover:underline">https://edorapad.com</a>), the web portal (<a href="https://app.edorapad.com" className="text-[#49A796] hover:underline">https://app.edorapad.com</a>), or our mobile applications (collectively, the &quot;Platform&quot;), you agree to be bound by these Terms of Service. If you are accepting these terms on behalf of an educational institution, you represent that you have the authority to bind that institution to these terms.
             </p>
           </section>
 
@@ -112,7 +112,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-heading text-[#111416] mb-4">8. Limitation of Liability</h2>
             <p>
-              Edorapad provides the Platform on an "as is" and "as available" basis. While we strive for maximum uptime and data integrity (utilizing cloud-hosted MongoDB and secure AWS infrastructure), we do not guarantee uninterrupted service. In no event shall Edorapad be liable for any indirect, incidental, or consequential damages arising from the use of or inability to use the Platform.
+              Edorapad provides the Platform on an &quot;as is&quot; and &quot;as available&quot; basis. While we strive for maximum uptime and data integrity (utilizing cloud-hosted MongoDB and secure AWS infrastructure), we do not guarantee uninterrupted service. In no event shall Edorapad be liable for any indirect, incidental, or consequential damages arising from the use of or inability to use the Platform.
             </p>
           </section>
 
