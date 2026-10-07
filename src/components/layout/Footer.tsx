@@ -1,5 +1,7 @@
 "use client";
 
+import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
@@ -29,11 +31,7 @@ export default function Footer() {
 
       <div className="w-full max-w-[120rem] mx-auto px-6 md:px-16 lg:px-24 py-16 grid grid-cols-2 md:grid-cols-5 gap-10">
         <div className="col-span-2 md:col-span-1">
-          <img 
-            src="https://media.base44.com/images/public/user_6a857d349dc49710b92336d0/1905a7cbc_edorapadicon.png" 
-            alt="Edorapad" 
-            className="h-10 w-auto object-contain mb-4" 
-          />
+          <Image src="https://media.base44.com/images/public/user_6a857d349dc49710b92336d0/1905a7cbc_edorapadicon.png" alt="Edorapad" width={1631} height={1725} sizes="40px" className="h-10 w-auto object-contain mb-4" />
           <p className="text-sm text-[#FBFBF9]/40">
             Educational Operating System — ERP, LMS & Live Classrooms.
           </p>
@@ -42,9 +40,9 @@ export default function Footer() {
         <div>
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#FBFBF9]/40 mb-4">Product</p>
           <ul className="space-y-3">
-            <li><a href="/#features" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Features</a></li>
-            <li><a href="/#architecture" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Architecture</a></li>
-            <li><a href="/#pricing" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Pricing</a></li>
+            <li><Link href="/#features" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Features</Link></li>
+            <li><Link href="/#architecture" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Architecture</Link></li>
+            <li><Link href="/#pricing" className="text-sm text-[#FBFBF9]/70 hover:text-[#FBFBF9] transition-colors">Pricing</Link></li>
           </ul>
         </div>
         
