@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { APP_STORE_URL, PLAY_STORE_URL } from '@/lib/appUrl';
 
 export default function Footer() {
   return (
@@ -35,6 +36,27 @@ export default function Footer() {
           <p className="text-sm text-[#FBFBF9]/40">
             Educational Operating System — ERP, LMS & Live Classrooms.
           </p>
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#FBFBF9]/40 mt-8 mb-4">Get the app</p>
+          <div className="flex flex-wrap gap-3">
+            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" className="inline-flex items-center gap-2.5 px-4 py-2 border border-[#FBFBF9]/20 hover:border-[#49A796] hover:text-[#49A796] transition-colors duration-300">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-5 w-5 shrink-0">
+                <path d="M16.37 12.6c-.02-2.35 1.92-3.48 2.01-3.54-1.1-1.6-2.8-1.82-3.4-1.85-1.45-.15-2.83.85-3.56.85-.74 0-1.87-.83-3.07-.81-1.58.02-3.04.92-3.85 2.33-1.64 2.85-.42 7.07 1.18 9.38.78 1.13 1.71 2.4 2.93 2.36 1.18-.05 1.62-.76 3.04-.76s1.82.76 3.06.74c1.27-.02 2.07-1.15 2.84-2.29.9-1.31 1.27-2.58 1.29-2.65-.03-.01-2.47-.95-2.47-3.76zM14.03 5.7c.65-.79 1.09-1.88.97-2.97-.94.04-2.07.62-2.74 1.41-.6.7-1.13 1.81-.99 2.88 1.05.08 2.11-.53 2.76-1.32z" />
+              </svg>
+              <span className="flex flex-col leading-tight">
+                <span className="text-[10px] text-[#FBFBF9]/50">Download on the</span>
+                <span className="text-sm font-medium">App Store</span>
+              </span>
+            </a>
+            <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play" className="inline-flex items-center gap-2.5 px-4 py-2 border border-[#FBFBF9]/20 hover:border-[#49A796] hover:text-[#49A796] transition-colors duration-300">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-5 w-5 shrink-0">
+                <path d="M3.61 1.81 13.79 12 3.61 22.19a1.4 1.4 0 0 1-.61-1.18V2.99c0-.49.24-.92.61-1.18zM14.85 13.06l2.36 2.36-10.95 6.27 8.59-8.63zM18.53 9.37l2.74 1.57c.81.47.81 1.65 0 2.12l-2.74 1.57L15.91 12l2.62-2.63zM6.26 2.31l10.95 6.27-2.36 2.36-8.59-8.63z" />
+              </svg>
+              <span className="flex flex-col leading-tight">
+                <span className="text-[10px] text-[#FBFBF9]/50">Get it on</span>
+                <span className="text-sm font-medium">Google Play</span>
+              </span>
+            </a>
+          </div>
         </div>
         
         <div>
