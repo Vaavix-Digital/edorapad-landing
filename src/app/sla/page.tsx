@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: "Service Level Agreement (SLA) | Edorapad",
-  description: "Edorapad Service Level Agreement for Enterprise and Professional tiers.",
+  description: "Edorapad Service Level Agreement for the Enterprise tier.",
 };
 
 export default function SLA() {

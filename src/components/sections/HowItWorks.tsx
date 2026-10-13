@@ -48,7 +48,7 @@ export default function HowItWorks() {
               </div>
             </div>
             <p className="absolute bottom-6 left-6 text-[#F5FAF9] text-sm tracking-[0.15em] uppercase">
-              Watch the 2-minute overview
+              Watch the overview
             </p>
           </motion.button>
           
@@ -89,7 +89,7 @@ export default function HowItWorks() {
                 Product walkthrough coming soon
               </h3>
               <p className="text-[#F5FAF9]/70 text-lg max-w-lg mb-10 leading-[1.6]">
-                We&apos;re putting the final polish on the Edorapad demo video. In the meantime, explore the platform features or start your free trial.
+                We&apos;re putting the final polish on the Edorapad demo video. In the meantime, explore the platform features or pick a plan to get started.
               </p>
               
               <Link 

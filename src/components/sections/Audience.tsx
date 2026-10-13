@@ -16,7 +16,7 @@ const tabData: Record<string, { heading: string; description: string; features: 
   },
   Creators: {
     heading: "Build and sell courses on your own terms.",
-    description: "Independent tutors and course creators get a marketplace storefront, instant payouts, coupon tools, and marketing — without surrendering your brand or your margins.",
+    description: "Independent tutors and course creators get a marketplace storefront, payouts every 15 days, coupon tools, and marketing — without surrendering your brand or your margins.",
     features: [
       "List and sell courses directly on Edorapad",
       "Payouts every 15 days to your bank account",
@@ -26,20 +26,20 @@ const tabData: Record<string, { heading: string; description: string; features: 
   },
   Parents: {
     heading: "Total transparency into your child's progress.",
-    description: "Live attendance, grades, homework, fee dues, and instant alerts — so you're never left guessing. One app, every update, full peace of mind.",
+    description: "Live attendance, exam results, assignment deadlines, fee dues, and instant alerts — so you're never left guessing. One app, every update, full peace of mind.",
     features: [
-      "Live attendance & AI-verified clock-in alerts",
-      "Grades, homework & report cards in real time",
-      "Fee dues, receipts & WhatsApp/SMS reminders",
-      "Direct messaging with tutors and the institute"
+      "Instant alerts when your child is marked absent or late",
+      "Exam, quiz & assignment results as they're published",
+      "Fee-due reminders by app notification & email",
+      "Certificate and new-assessment alerts for every child"
     ]
   },
   Students: {
     heading: "Your entire classroom in your pocket.",
-    description: "Access live and recorded classes, assignments, timetables, results, and fee history from a single app — on Android, iOS, or the web.",
+    description: "Access live and recorded classes, assignments, exams, results, and fee history from a single app — on Android, iOS, or the web.",
     features: [
       "Live + recorded hybrid classes anywhere",
-      "Assignments, timetables & results in one place",
+      "Assignments, exams & results in one place",
       "Downloadable certificates on completion",
       "Seamless sync across phone, tablet & web"
     ]
@@ -50,7 +50,7 @@ const tabData: Record<string, { heading: string; description: string; features: 
     features: [
       "AI facial-verification attendance clock-in",
       "Auto-syncing course material across cohorts",
-      "Student progress, lesson-time & activity scores",
+      "Student progress, attendance & assessment results",
       "Live classroom tools for hybrid teaching"
     ]
   }

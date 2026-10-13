@@ -295,17 +295,18 @@ export default function Pricing() {
             } else {
               // Dynamically set locale based on currency so USD formats as $100,000 and INR as ₹1,00,000
               const locale = pkg.currency === 'USD' ? 'en-US' : 'en-IN';
-              const formattedPrice = new Intl.NumberFormat(locale, { 
-                style: 'currency', 
-                currency: pkg.currency || 'INR', 
-                maximumFractionDigits: 0 
-              }).format(pkg.monthlyPrice || 0);
+              const format = (amount: number) => new Intl.NumberFormat(locale, {
+                style: 'currency',
+                currency: pkg.currency || 'INR',
+                maximumFractionDigits: 0
+              }).format(amount);
 
-              if (isAnnual) {
-                mainPrice = formattedPrice;
-                subtext = `Billed annually at ${pkg.annualPriceLabel}`;
+              if (isAnnual && pkg.annualPrice) {
+                // The annual price covers 12 months (paying for 10), so show what a month works out to.
+                mainPrice = format(pkg.annualPrice / 12);
+                subtext = `/mo, billed annually at ${pkg.annualPriceLabel}`;
               } else {
-                mainPrice = formattedPrice;
+                mainPrice = format(pkg.monthlyPrice || 0);
                 subtext = "/mo, billed monthly";
               }
             }
@@ -384,7 +385,14 @@ export default function Pricing() {
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check w-5 h-5 text-[#49A796] shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
           <p className="text-[#111416] leading-[1.6]">
-            <span className="font-semibold">Founding-Customer Offer</span> — {data.terms.foundingCustomerOffer.description.replace(data.terms.foundingCustomerOffer.priceLabel, '')} <span className="font-semibold">{data.terms.foundingCustomerOffer.priceLabel}</span> for 12 months, in exchange for a case study / testimonial.
+            <span className="font-semibold">Founding-Customer Offer</span> — {(() => {
+              // The backend's sentence already names the price and terms; bold the price in place.
+              const { description, priceLabel } = data.terms.foundingCustomerOffer;
+              const [before, ...after] = description.split(priceLabel);
+              return after.length
+                ? <>{before}<span className="font-semibold">{priceLabel}</span>{after.join(priceLabel)}</>
+                : description;
+            })()}
           </p>
         </motion.div>
 

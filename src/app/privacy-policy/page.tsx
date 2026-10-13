@@ -62,7 +62,7 @@ export default function PrivacyPolicy() {
               Edorapad (&quot;Edorapad&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) operates a multi-role educational management platform comprising our website at <a href="https://edorapad.com" className="text-[#49A796] hover:underline">https://edorapad.com</a>, the Edorapad mobile application for Android and iOS devices, and related cloud services (collectively, the &quot;Services&quot;).
             </p>
             <p>
-              Our platform connects educational institutions, online and offline tutors, students, parents/guardians, and administrative personnel to streamline academic scheduling, attendance tracking, classroom lectures, homework management, tuition fee records, and institutional communications.
+              Our platform connects educational institutions, online and offline tutors, students, parents/guardians, and administrative personnel to streamline academic scheduling, attendance tracking, classroom lectures, assignments and assessments, tuition fee records, and institutional communications.
             </p>
             <p>
               This Privacy Policy governs the manner in which Edorapad collects, uses, maintains, and discloses information collected from users. By registering an account, downloading the mobile application, or accessing any part of the Services, you acknowledge that you have read and understood this Privacy Policy.
@@ -74,7 +74,7 @@ export default function PrivacyPolicy() {
             <p className="mb-4">We collect information necessary to deliver educational workflows and manage platform integrity across our distinct user roles:</p>
             
             <h3 className="text-lg font-bold text-[#111416] mb-2 mt-6">A. Account & Profile Information</h3>
-            <p>When registering or onboarding an account, we collect: full name, email address, password credentials (stored using salted one-way hashes), phone number, profile photo, date of birth, gender, nationality, and user role designation (Student, Parent, Online Tutor, Offline Tutor, Institute Admin, Accounts & Marketing Staff).</p>
+            <p>When registering or onboarding an account, we collect: full name, email address, password credentials (stored using salted one-way hashes), phone number, profile photo, date of birth, gender, nationality, and user role designation (Student, Parent, Online Tutor, Offline Tutor, Institute Admin, Accounts & Marketing Staff, Course Creator).</p>
             
             <h3 className="text-lg font-bold text-[#111416] mb-2 mt-6">B. Student, Parent & Tutor Information</h3>
             <p>Student enrollment details, student IDs, roll numbers, department and batch assignments, parent-student relationships, guardian contact credentials, tutor academic qualifications, subject specializations, and faculty rosters.</p>
@@ -83,7 +83,7 @@ export default function PrivacyPolicy() {
             <p>Class attendance logs, timestamps for online and offline classroom presence, leave requests and approval records, assessment submissions, exam and quiz marks, teacher remarks, certificates earned, and academic performance summaries.</p>
             
             <h3 className="text-lg font-bold text-[#111416] mb-2 mt-6">D. Face Verification Data (Faculties/Tutors)</h3>
-            <p>For tutors utilizing optional face verification for lecture clock-in, facial landmarks are captured temporarily to verify identity at the start of a session. Facial geometry templates are processed strictly for verification, are encrypted, and are never sold, licensed, or shared with commercial brokers.</p>
+            <p>Where an institute uses face verification clock-in (Growth plan and above), its tutors and staff are asked to complete a short head-movement liveness check on camera. One straight-on frame is stored as a reference photo and indexed with Amazon Rekognition, the face-recognition service of Amazon Web Services; later check-ins are compared against it. Face data is used strictly for identity verification, is stored encrypted, is deleted when the account is deleted (see Section 9), and is never sold, licensed, or shared with commercial brokers.</p>
             
             <h3 className="text-lg font-bold text-[#111416] mb-2 mt-6">E. Device & Technical Information</h3>
             <p>Device model, operating system version, screen resolution, IP address, unique device identifiers, network connection status, crash logs, and diagnostic telemetry necessary to maintain app stability and prevent unauthorized multiple-device takeovers.</p>
@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
             <p className="mb-4">Edorapad uses collected information strictly for educational, operational, and safety purposes:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Core Educational Delivery:</strong> Facilitating live online video classrooms, offline lecture scheduling, batch assignments, and course materials access.</li>
-              <li><strong>Attendance & Grade Tracking:</strong> Calculating monthly attendance percentages, compiling report cards, and issuing verified certificates.</li>
+              <li><strong>Attendance & Grade Tracking:</strong> Calculating monthly attendance percentages, compiling performance summaries, and issuing verified certificates.</li>
               <li><strong>Institutional Administration:</strong> Enabling institutions and faculty to review leave requests, student progress, fee payments, and admissions.</li>
               <li><strong>Parent-Institute Transparency:</strong> Providing parents visibility into their child&apos;s attendance, teacher assessments, and pending fee dues.</li>
               <li><strong>Security & Authentication:</strong> Verifying user role permissions (RBAC), defending against brute-force attacks, and preventing unauthorized account sharing.</li>
@@ -140,7 +140,7 @@ export default function PrivacyPolicy() {
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>With Your Enrolled Institution:</strong> Student academic records, attendance history, and course progress are shared directly with the authorized administration and assigned faculty of the student&apos;s institution.</li>
               <li><strong>With Verified Parents / Guardians:</strong> Parents linked to a student account can view their child&apos;s academic assessments, attendance statistics, fee records, and institutional feedback.</li>
-              <li><strong>With Infrastructure Service Providers:</strong> Trusted third-party cloud hosting providers, database providers, push notification services (Expo, Firebase), and payment gateways that process data on our behalf under strict Data Processing Agreements (DPAs).</li>
+              <li><strong>With Infrastructure Service Providers:</strong> Trusted third-party cloud hosting and database providers, Amazon Web Services (file storage and face verification), email delivery, push notification services (Expo, Firebase), and payment gateways (Razorpay, Stripe) that process data on our behalf under strict Data Processing Agreements (DPAs).</li>
               <li><strong>Legal Requirements:</strong> When required by applicable law, regulation, subpoena, or enforceable governmental order to protect the rights, property, or safety of students, users, or the public.</li>
             </ul>
           </section>
@@ -166,7 +166,7 @@ export default function PrivacyPolicy() {
               <li><strong>In-App Deletion:</strong> Navigate to Settings {">"} Profile {">"} Delete Account inside the mobile application or web portal.</li>
               <li><strong>Email Request:</strong> Send an account deletion request to <a href="mailto:privacy@edorapad.com" className="text-[#49A796] hover:underline">privacy@edorapad.com</a> from your registered email address with the subject &quot;Account Deletion Request&quot;.</li>
             </ul>
-            <p>Upon receipt and verification of your request, your personal profile data, authentication credentials, and active tokens will be permanently removed from our active databases within 30 days. Certain academic records (such as completed course transcripts) may be archived by your enrolled institution as required by educational regulatory laws.</p>
+            <p>When you delete your account, it is deactivated immediately: you are signed out on every device and can no longer sign in. 30 days later, your personal data is permanently erased: your name, email, phone number, password, sign-in links, face verification data, profile photo, bank and card details, notifications, and device tokens. Records that institutions must keep, such as payments, enrollments, attendance, and certificates, are retained without your name or contact details, as required by educational and tax regulations.</p>
           </section>
 
           <section>
@@ -175,8 +175,8 @@ export default function PrivacyPolicy() {
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Transport Layer Security (TLS):</strong> All communications between mobile clients, browsers, and our backend servers are encrypted using modern TLS 1.3 / HTTPS.</li>
               <li><strong>Database Encryption at Rest:</strong> User tables, credentials, and records stored in cloud databases are protected using AES-256 bit encryption.</li>
-              <li><strong>Role-Based Access Control (RBAC):</strong> Strict backend middleware ensures students, parents, tutors, and staff can only access data explicitly permitted for their role.</li>
-              <li><strong>Token Protection:</strong> Stateless JWT tokens are signed with rotating cryptographic secrets and securely stored in device-native secure keystores.</li>
+              <li><strong>Role-Based Access Control (RBAC):</strong> Backend middleware checks each user&apos;s role and institute before returning data, so students, parents, tutors, and staff see what their role permits.</li>
+              <li><strong>Token Protection:</strong> Sign-in tokens are signed and expire automatically; sign-in sessions are tracked on our servers and revoked on logout and account deletion. On mobile, tokens are kept in device-native secure keystores.</li>
             </ul>
           </section>
 

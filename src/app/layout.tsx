@@ -19,8 +19,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Edorapad | Your Ultimate Learning Platform",
-  description: "Discover the best features, pricing, and how Edorapad works to elevate your experience.",
+  title: "Edorapad | Educational Operating System — ERP, LMS & Live Classrooms",
+  description: "One platform for institutes, tutors, students, and parents: attendance, live classes, fee collection, payroll, and AI facial verification clock-in. Plus a marketplace for course creators.",
 };
 
 export default function RootLayout({

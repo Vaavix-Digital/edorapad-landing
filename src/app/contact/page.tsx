@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
   title: "Contact Us | Edorapad",
@@ -57,41 +58,7 @@ export default function Contact() {
           <div className="lg:col-span-7 bg-white p-8 md:p-10 shadow-sm rounded-xl border border-[#111416]/5">
             <h2 className="text-2xl font-heading text-[#111416] mb-6">Send a Message</h2>
             
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-[#111416] mb-2">First Name</label>
-                  <input type="text" id="firstName" className="w-full px-4 py-3 bg-[#FBFBF9] border border-[#111416]/10 rounded-md focus:outline-none focus:border-[#49A796] focus:ring-1 focus:ring-[#49A796] transition-colors" placeholder="Jane" />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-[#111416] mb-2">Last Name</label>
-                  <input type="text" id="lastName" className="w-full px-4 py-3 bg-[#FBFBF9] border border-[#111416]/10 rounded-md focus:outline-none focus:border-[#49A796] focus:ring-1 focus:ring-[#49A796] transition-colors" placeholder="Doe" />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[#111416] mb-2">Work Email</label>
-                <input type="email" id="email" className="w-full px-4 py-3 bg-[#FBFBF9] border border-[#111416]/10 rounded-md focus:outline-none focus:border-[#49A796] focus:ring-1 focus:ring-[#49A796] transition-colors" placeholder="jane@institution.edu" />
-              </div>
-              
-              <div>
-                <label htmlFor="institution" className="block text-sm font-medium text-[#111416] mb-2">Institution / Company Name</label>
-                <input type="text" id="institution" className="w-full px-4 py-3 bg-[#FBFBF9] border border-[#111416]/10 rounded-md focus:outline-none focus:border-[#49A796] focus:ring-1 focus:ring-[#49A796] transition-colors" placeholder="Global Academy" />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-[#111416] mb-2">How can we help?</label>
-                <textarea id="message" rows={4} className="w-full px-4 py-3 bg-[#FBFBF9] border border-[#111416]/10 rounded-md focus:outline-none focus:border-[#49A796] focus:ring-1 focus:ring-[#49A796] transition-colors resize-none" placeholder="Tell us about your requirements..."></textarea>
-              </div>
-              
-              <button type="button" className="w-full py-4 bg-[#155863] text-white font-medium rounded-md hover:bg-[#49A796] transition-colors duration-300">
-                Send Message
-              </button>
-              
-              <p className="text-xs text-[#6B8185] text-center mt-4">
-                By submitting this form, you agree to our <Link href="/privacy-policy" className="underline hover:text-[#111416]">Privacy Policy</Link>.
-              </p>
-            </form>
+            <ContactForm />
           </div>
 
         </div>

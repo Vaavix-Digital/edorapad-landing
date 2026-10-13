@@ -44,7 +44,7 @@ export default function Documentation() {
               <li><strong>All-in-One Educational ERP</strong> — LMS, live classrooms, attendance, admissions, fee collection, and payroll.</li>
               <li><strong>AI Facial Verification Clock-In</strong> — camera-based faculty attendance authentication.</li>
               <li><strong>Hybrid Learning</strong> — support for both physical and online classes.</li>
-              <li><strong>Parental Transparency</strong> — attendance, grades, homework, fees, and alerts.</li>
+              <li><strong>Parental Transparency</strong> — attendance, exam results, assignment deadlines, fee dues, and alerts.</li>
               <li><strong>Integrated Financial Suite</strong> — installment tracking, receipts, reminders, and payroll.</li>
               <li><strong>Cross-Platform Sync</strong> — Android, iOS, and responsive web access.</li>
             </ul>
@@ -58,7 +58,7 @@ export default function Documentation() {
                 <h3 className="font-heading text-lg text-[#155863] mb-2">Institute Management Portal</h3>
                 <ul className="list-disc pl-5 space-y-1 text-sm">
                   <li>Executive dashboard and enrollment/revenue statistics</li>
-                  <li>Department, course, batch, timetable, admissions, and staff management</li>
+                  <li>Department, course, batch, admissions, and staff management</li>
                   <li>Attendance, leave, certificates, and campus broadcasts</li>
                 </ul>
               </div>
@@ -86,7 +86,7 @@ export default function Documentation() {
                 <ul className="list-disc pl-5 space-y-1 text-sm">
                   <li>Multi-child switching</li>
                   <li>Attendance and academic monitoring</li>
-                  <li>Fee payments, due alerts, notifications, and teacher communication</li>
+                  <li>Fee payments, due alerts, and notifications</li>
                 </ul>
               </div>
               
@@ -103,7 +103,8 @@ export default function Documentation() {
                 <h3 className="font-heading text-lg text-[#155863] mb-2">Course Creator Marketplace</h3>
                 <ul className="list-disc pl-5 space-y-1 text-sm">
                   <li>Curriculum builder</li>
-                  <li>Pricing, discounts, reviews, payouts, and royalties</li>
+                  <li>Pricing, coupons, reviews, and payouts every 15 days</li>
+                  <li>Pro &amp; Elite: email marketing, custom storefront, bulk course upload, and custom certificates</li>
                 </ul>
               </div>
             </div>
@@ -113,7 +114,7 @@ export default function Documentation() {
               <ul className="list-disc pl-5 space-y-1 text-sm">
                 <li>Institution onboarding</li>
                 <li>Course moderation and quality control</li>
-                <li>Global revenue, payouts, system health, and audit logs</li>
+                <li>Global revenue, payouts, and support tickets</li>
               </ul>
             </div>
           </section>

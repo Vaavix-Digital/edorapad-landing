@@ -36,7 +36,7 @@ export default function Features() {
               {
                 num: "02",
                 title: "The Knowledge Ledger",
-                desc: "A clear overview of student progress, lesson-time metrics, and dynamic activity scores — for every tutor, department, and campus."
+                desc: "A clear overview of student progress, attendance, and assessment results — for every course, batch, and branch."
               },
               {
                 num: "03",

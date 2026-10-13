@@ -12,10 +12,10 @@ const updates = [
     date: "September 24, 2026",
     title: "AI Facial Verification Clock-In",
     category: "Feature",
-    description: "We are thrilled to introduce AI Facial Verification for faculty and staff attendance. This feature eliminates manual clock-ins and buddy punching by utilizing a highly secure, privacy-compliant facial recognition engine directly from the Edorapad mobile app.",
+    description: "We are thrilled to introduce AI Facial Verification for faculty and staff attendance. This feature eliminates manual clock-ins and buddy punching: staff clock in with their face from the Edorapad app, verified by a liveness check and Amazon Rekognition. Available on the Growth plan and above.",
     changes: [
       "Added biometric registration flow for faculty.",
-      "Introduced geo-fenced check-in boundaries.",
+      "Head-movement liveness check before every enrolment and clock-in.",
       "Real-time attendance syncing to the Institute Dashboard."
     ]
   },
@@ -24,11 +24,11 @@ const updates = [
     date: "September 15, 2026",
     title: "Enhanced Fee Collection Gateway",
     category: "Improvement",
-    description: "Our integrated financial suite has been overhauled to support split payments, automated late fee calculation, and direct deposit setups for payroll. Parents will now receive WhatsApp and push notification reminders 3 days before dues.",
+    description: "Our integrated financial suite has been overhauled to support installment plans, automatic course-access locking for overdue fees, and staff payroll records. Students and parents now receive push notification and email reminders 3 days and 1 day before a due date, on the day, and afterwards while it stays unpaid.",
     changes: [
       "Added multi-installment tracking.",
       "New automated notification engine for pending dues.",
-      "Export financial ledgers directly to CSV/PDF."
+      "Course access pauses when an installment is overdue and resumes as soon as it is paid."
     ]
   },
   {

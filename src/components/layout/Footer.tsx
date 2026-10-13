@@ -26,13 +26,13 @@ export default function Footer() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 text-[#FBFBF9]/50 max-w-lg leading-[1.6]"
         >
-          Bring your institution, faculty, students, and parents into one synchronized platform — set up in minutes.
+          Bring your institution, faculty, students, and parents into one synchronized platform. Register in minutes; your institute goes live once our team has verified your documents.
         </motion.p>
       </div>
 
       <div className="w-full max-w-[120rem] mx-auto px-6 md:px-16 lg:px-24 py-16 grid grid-cols-2 md:grid-cols-5 gap-10">
         <div className="col-span-2 md:col-span-1">
-          <Image src="https://media.base44.com/images/public/user_6a857d349dc49710b92336d0/1905a7cbc_edorapadicon.png" alt="Edorapad" width={1631} height={1725} sizes="40px" className="h-10 w-auto object-contain mb-4" />
+          <Image src="/favicon.png" alt="Edorapad" width={1631} height={1725} sizes="40px" className="h-10 w-auto object-contain mb-4" />
           <p className="text-sm text-[#FBFBF9]/40">
             Educational Operating System — ERP, LMS & Live Classrooms.
           </p>

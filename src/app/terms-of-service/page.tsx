@@ -65,7 +65,7 @@ export default function TermsOfService() {
             <p>Institutes are responsible for the accuracy of all student and staff data entered into the Platform. Institutions must ensure they have obtained necessary consent from parents/guardians before enrolling minors.</p>
             
             <h3 className="text-lg font-bold text-[#111416] mb-2 mt-6">B. Online & Offline Tutors</h3>
-            <p>Tutors are granted access to manage assigned batches, mark attendance, and conduct live or offline classes. Tutors utilizing the web portal consent to the use of camera-based face verification solely for the purpose of secure login and session attendance validation.</p>
+            <p>Tutors are granted access to manage assigned batches, mark attendance, and conduct live or offline classes. Where their institute uses face verification clock-in, tutors and staff consent to camera-based face verification solely for the purpose of secure login and attendance validation.</p>
             
             <h3 className="text-lg font-bold text-[#111416] mb-2 mt-6">C. Students & Parents</h3>
             <p>Students and Parents are provided access to track academic progress, attend classes, view exam results, and process fee payments. Users must maintain the confidentiality of their login credentials.</p>
@@ -74,7 +74,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-heading text-[#111416] mb-4">4. Payment Processing & Fees</h2>
             <p className="mb-4">
-              Edorapad integrates with third-party payment gateways (including Razorpay and Stripe) to facilitate the collection of student tuition fees and processing of staff payroll.
+              Edorapad integrates with third-party payment gateways (including Razorpay and Stripe) to facilitate the collection of student tuition fees and course payments, and payouts to institutes and course creators. Staff payroll is recorded in the Platform; salaries themselves are paid by the institution.
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Transaction Security:</strong> Edorapad does not store full credit card numbers or banking passwords. All transactions are securely processed by PCI-DSS compliant providers.</li>
@@ -98,7 +98,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-heading text-[#111416] mb-4">6. Face Verification Technology</h2>
             <p>
-              To ensure the integrity of tutor logins and prevent unauthorized access, Edorapad employs camera-based face verification for Tutors and Accounts staff accessing the web portal. By using these roles, you consent to the temporary capture and processing of facial landmarks for identity verification. This data is encrypted, processed locally or securely transmitted, and is never sold to third parties.
+              To ensure the integrity of tutor logins and prevent unauthorized access, Edorapad employs camera-based face verification for tutors and staff of institutes that use face verification clock-in. By using these roles, you consent to a short liveness check on camera and to one reference photo being stored and processed with Amazon Rekognition for identity verification. This data is stored encrypted, deleted when your account is deleted, and never sold to third parties.
             </p>
           </section>
 
@@ -112,7 +112,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-heading text-[#111416] mb-4">8. Limitation of Liability</h2>
             <p>
-              Edorapad provides the Platform on an &quot;as is&quot; and &quot;as available&quot; basis. While we strive for maximum uptime and data integrity (utilizing cloud-hosted MongoDB and secure AWS infrastructure), we do not guarantee uninterrupted service. In no event shall Edorapad be liable for any indirect, incidental, or consequential damages arising from the use of or inability to use the Platform.
+              Edorapad provides the Platform on an &quot;as is&quot; and &quot;as available&quot; basis. While we strive for maximum uptime and data integrity (utilizing managed PostgreSQL databases and AWS infrastructure), we do not guarantee uninterrupted service. In no event shall Edorapad be liable for any indirect, incidental, or consequential damages arising from the use of or inability to use the Platform.
             </p>
           </section>
 
