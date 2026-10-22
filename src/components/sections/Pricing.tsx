@@ -44,10 +44,10 @@ const initialPricingData = {
           "MOBILE_APP"
         ],
         "currency": "INR",
-        "monthlyPrice": 6000,
-        "priceLabel": "₹6,000/mo",
-        "annualPrice": 60000,
-        "annualPriceLabel": "₹60,000/yr",
+        "monthlyPrice": 1200,
+        "priceLabel": "₹1,200/mo",
+        "annualPrice": 12000,
+        "annualPriceLabel": "₹12,000/yr",
         "includes": [
           "Institute + student/parent/tutor portals",
           "Attendance",
@@ -79,10 +79,10 @@ const initialPricingData = {
           "MARKETING_LEAD_TRACKING"
         ],
         "currency": "INR",
-        "monthlyPrice": 18000,
-        "priceLabel": "₹18,000/mo",
-        "annualPrice": 180000,
-        "annualPriceLabel": "₹1,80,000/yr",
+        "monthlyPrice": 5000,
+        "priceLabel": "₹5,000/mo",
+        "annualPrice": 50000,
+        "annualPriceLabel": "₹50,000/yr",
         "includes": [
           "Everything in Starter",
           "Live classes",
@@ -118,10 +118,10 @@ const initialPricingData = {
           "PRIORITY_SUPPORT"
         ],
         "currency": "INR",
-        "monthlyPrice": 45000,
-        "priceLabel": "₹45,000/mo",
-        "annualPrice": 450000,
-        "annualPriceLabel": "₹4,50,000/yr",
+        "monthlyPrice": 20000,
+        "priceLabel": "₹20,000/mo",
+        "annualPrice": 200000,
+        "annualPriceLabel": "₹2,00,000/yr",
         "includes": [
           "Everything in Growth",
           "Multi-branch support",
@@ -199,15 +199,6 @@ const initialPricingData = {
         "description": "2 months free (pay for 10, get 12) on any package.",
         "billedMonths": 10,
         "freeMonths": 2
-      },
-      "foundingCustomerOffer": {
-        "description": "First 30 institutes get Starter locked at ₹4,000/mo for 12 months, in exchange for a case study / testimonial.",
-        "packageId": "STARTER",
-        "seats": 30,
-        "lockInMonths": 12,
-        "currency": "INR",
-        "monthlyPrice": 4000,
-        "priceLabel": "₹4,000/mo"
       }
     },
     "countrySource": "geolocation"
@@ -374,27 +365,6 @@ export default function Pricing() {
           })}
 
         </div>
-
-        {/* Founding-Customer Offer */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="border border-[#49A796]/30 bg-[#49A796]/10 px-8 py-6 mb-16 flex flex-col md:flex-row md:items-center gap-3 md:gap-6"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check w-5 h-5 text-[#49A796] shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
-          <p className="text-[#111416] leading-[1.6]">
-            <span className="font-semibold">Founding-Customer Offer</span> — {(() => {
-              // The backend's sentence already names the price and terms; bold the price in place.
-              const { description, priceLabel } = data.terms.foundingCustomerOffer;
-              const [before, ...after] = description.split(priceLabel);
-              return after.length
-                ? <>{before}<span className="font-semibold">{priceLabel}</span>{after.join(priceLabel)}</>
-                : description;
-            })()}
-          </p>
-        </motion.div>
 
         {/* Add-ons 
         <motion.div 
