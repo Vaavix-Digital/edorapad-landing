@@ -11,5 +11,5 @@ export const appUrl = (path = '/') => `${APP_URL}${path.startsWith('/') ? path :
  * Mobile store listings. Set NEXT_PUBLIC_PLAY_STORE_URL / NEXT_PUBLIC_APP_STORE_URL
  * to the real listing URLs; until then these fall back to a store search.
  */
-export const PLAY_STORE_URL = process.env.NEXT_PUBLIC_PLAY_STORE_URL || 'https://play.google.com/store/search?q=edorapad&c=apps';
-export const APP_STORE_URL = process.env.NEXT_PUBLIC_APP_STORE_URL || 'https://apps.apple.com/search?term=edorapad';
+export const PLAY_STORE_URL = process.env.NEXT_PUBLIC_PLAY_STORE_URL || 'https://play.google.com/store/apps/details?id=com.edorapad.app';
+export const APP_STORE_URL = process.env.NEXT_PUBLIC_APP_STORE_URL || 'https://apps.apple.com/';
